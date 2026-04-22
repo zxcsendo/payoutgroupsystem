@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finances – StarCode Studio</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a1a;
+  color: #e0e0e0;
+  display: flex;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+/* ── ICON SIDEBAR ── */
+.sidebar {
+  width: 52px;
+  background: #242424;
+  border-right: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  position: fixed;
+  height: 100vh;
+  z-index: 20;
+  gap: 1px;
+}
+.sb-logo {
+  width: 34px; height: 34px;
+  background: #fff; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 8px; flex-shrink: 0;
+}
+.sb-item {
+  width: 42px; height: 42px;
+  border-radius: 8px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  cursor: pointer; gap: 2px;
+  color: #777; transition: background 0.1s, color 0.1s;
+}
+.sb-item:hover, .sb-item.active { background: #333; color: #ddd; }
+.sb-item svg { width: 18px; height: 18px; }
+.sb-item span { font-size: 7.5px; font-weight: 600; }
+
+/* ── LEFT NAV ── */
+.leftnav {
+  width: 198px;
+  background: #1e1e1e;
+  border-right: 1px solid #2a2a2a;
+  padding: 14px 0;
+  position: fixed;
+  left: 52px;
+  height: 100vh;
+  z-index: 10;
+}
+.leftnav-title {
+  font-size: 17px; font-weight: 700; color: #fff;
+  padding: 0 14px 12px;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 6px;
+}
+.lnav-item {
+  padding: 8px 14px; cursor: pointer;
+  color: #bbb; font-size: 13px; font-weight: 500;
+  transition: all 0.1s; border-radius: 4px; margin: 0 4px;
+}
+.lnav-item:hover { background: #282828; color: #eee; }
+.lnav-item.active { background: #282828; color: #fff; font-weight: 700; }
+.lnav-sep { height: 1px; background: #2a2a2a; margin: 8px 0; }
+.lnav-sub {
+  padding: 7px 14px; cursor: pointer;
+  color: #888; font-size: 13px;
+  transition: all 0.1s; border-radius: 4px; margin: 0 4px;
+}
+.lnav-sub:hover { background: #282828; color: #ccc; }
+
+/* ── TOPBAR ── */
+.topbar {
+  position: fixed; top: 0; left: 250px; right: 0; height: 44px;
+  background: #1e1e1e; border-bottom: 1px solid #2a2a2a;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 18px; z-index: 5;
+}
+.topbar-left { display: flex; align-items: center; gap: 10px; }
+.topbar-ham { color: #888; cursor: pointer; }
+.topbar-title { font-size: 17px; font-weight: 700; color: #fff; }
+.topbar-right { display: flex; align-items: center; gap: 14px; }
+.topbar-icon { color: #888; cursor: pointer; }
+.topbar-icon:hover { color: #ccc; }
+.topbar-avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #c04; cursor: pointer;
+}
+
+/* ── MAIN ── */
+.main {
+  margin-left: 250px;
+  margin-top: 44px;
+  flex: 1;
+  padding: 22px 28px;
+}
+
+.page-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.page-desc { color: #777; font-size: 12px; line-height: 1.6; max-width: 920px; margin-bottom: 20px; }
+
+/* FUNDS ROW — flat, no card borders */
+.funds-row {
+  display: flex; gap: 40px; align-items: flex-start;
+  margin-bottom: 20px;
+}
+.funds-label { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.funds-sub { font-size: 12px; color: #777; margin-bottom: 10px; }
+.funds-val {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 20px; font-weight: 700; color: #fff;
+}
+.send-label { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.send-sub { font-size: 12px; color: #777; margin-bottom: 10px; }
+.btn-send {
+  padding: 7px 16px; background: #3a3a3a;
+  border: none; border-radius: 6px;
+  color: #888; font-size: 13px; font-weight: 600;
+  cursor: not-allowed; font-family: inherit;
+}
+.btn-send.on { background: #3a3a3a; color: #bbb; cursor: pointer; }
+.btn-send.on:hover { background: #444; color: #eee; }
+
+.hdivider { height: 1px; background: #2a2a2a; margin-bottom: 16px; }
+
+/* TABS */
+.tabs { display: flex; gap: 6px; margin-bottom: 18px; }
+.tab {
+  padding: 5px 16px; border-radius: 20px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  border: 1px solid #3a3a3a; color: #888; background: transparent;
+  transition: all 0.1s;
+}
+.tab.active { background: #fff; color: #111; border-color: #fff; }
+.tab:not(.active):hover { background: #2a2a2a; color: #ccc; }
+
+/* SPLITS + DONUT */
+.splits-donut-row { display: flex; align-items: flex-start; }
+
+.splits-wrap { min-width: 340px; max-width: 480px; }
+.splits-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 10px;
+}
+.splits-title { font-size: 14px; font-weight: 700; color: #fff; }
+.splits-pencil { color: #777; cursor: pointer; }
+.splits-pencil svg { width: 15px; height: 15px; vertical-align: middle; }
+.splits-line { height: 1px; background: #2e2e2e; }
+.splits-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 0 12px 10px;
+  border-left: 3px solid #f5a623;
+}
+.group-thumb {
+  width: 36px; height: 36px; border-radius: 6px;
+  background: #2a2a2a; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.splits-info { flex: 1; }
+.splits-name { font-size: 13px; font-weight: 600; color: #fff; }
+.splits-id { font-size: 11px; color: #777; }
+.splits-pct { font-size: 14px; font-weight: 700; color: #fff; padding-left: 12px; }
+
+/* DONUT — directly beside splits */
+.donut-wrap {
+  flex: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding-left: 10px;
+}
+.donut-legend {
+  display: flex; align-items: flex-start; gap: 5px;
+  font-size: 11px;
+  align-self: flex-end;
+  padding-right: 8px;
+  margin-top: -16px;
+}
+.donut-dot { width: 7px; height: 7px; border-radius: 50%; background: #00a2ff; flex-shrink: 0; margin-top: 2px; }
+
+/* ── MODAL ── */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.18s;
+}
+.overlay.open { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: #242424;
+  border-radius: 12px;
+  padding: 22px 22px 18px;
+  width: 370px; max-width: 96vw;
+  transform: scale(0.96); transition: transform 0.18s;
+}
+.overlay.open .modal { transform: scale(1); }
+
+.modal-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 16px; }
+
+/* SEARCH */
+.search-wrap { position: relative; }
+.search-inp {
+  width: 100%; padding: 9px 12px 9px 34px;
+  background: #1a1a1a; border: 1px solid #3a3a3a; border-radius: 8px;
+  color: #eee; font-size: 14px; outline: none; font-family: inherit;
+}
+.search-inp:focus { border-color: #555; }
+.search-ico {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  color: #666; pointer-events: none;
+}
+.search-ico svg { width: 14px; height: 14px; }
+
+.dropdown {
+  background: #2c2c2c; border: 1px solid #3a3a3a; border-radius: 8px;
+  margin-top: 5px; overflow: hidden; display: none;
+}
+.dropdown.show { display: block; }
+.drop-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; cursor: pointer; transition: background 0.1s;
+}
+.drop-item:hover { background: #333; }
+
+/* Selected user — styled like Image 1 */
+.sel-card {
+  display: none; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  background: #2c2c2c; border-radius: 8px;
+  margin-top: 6px; position: relative;
+}
+.sel-card.show { display: flex; }
+.sel-x {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  color: #666; cursor: pointer; font-size: 15px;
+}
+.sel-x:hover { color: #aaa; }
+
+.u-av {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: #444; overflow: hidden; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: #fff; font-size: 14px;
+}
+.u-av img { width: 100%; height: 100%; object-fit: cover; }
+.u-name { font-size: 13px; font-weight: 700; color: #fff; }
+.u-at { font-size: 11px; color: #777; }
+
+.err { font-size: 12px; color: #e55; margin-top: 5px; display: none; }
+.err.show { display: block; }
+
+/* AMOUNT STEP — matches Image 5 */
+.amt-top {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px;
+}
+.amt-top-lbl { font-size: 17px; font-weight: 700; color: #fff; }
+.amt-top-val { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: #fff; }
+
+.amt-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px;
+}
+.amt-user { display: flex; align-items: center; gap: 10px; }
+
+/* The "Amount" labeled input box */
+.amt-field { position: relative; }
+.amt-field-lbl {
+  position: absolute; top: -8px; left: 10px;
+  background: #242424; padding: 0 4px;
+  font-size: 10px; color: #888; font-weight: 600; line-height: 1;
+}
+.amt-field-inner {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid #555; border-radius: 8px;
+  min-width: 130px;
+}
+.amt-inp {
+  background: transparent; border: none; outline: none;
+  color: #fff; font-size: 15px; font-weight: 700;
+  font-family: inherit; width: 85px;
+}
+.amt-inp::placeholder { color: #444; }
+
+/* CONFIRM — matches Image 6 */
+.cf-sec { margin-bottom: 14px; }
+.cf-lbl { font-size: 12px; color: #888; font-weight: 600; margin-bottom: 8px; }
+.cf-party { display: flex; align-items: center; gap: 10px; }
+.cf-thumb {
+  width: 44px; height: 44px; border-radius: 6px;
+  background: #fff; overflow: hidden; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; color: #111;
+}
+.cf-name { font-size: 14px; font-weight: 700; color: #fff; }
+.cf-id { font-size: 11px; color: #777; }
+.cf-right { display: flex; align-items: center; gap: 6px; margin-left: auto; font-size: 14px; font-weight: 700; color: #fff; }
+
+.cf-div { height: 1px; background: #333; margin: 14px 0; }
+.cf-total { display: flex; align-items: center; justify-content: space-between; }
+.cf-total-lbl { font-size: 16px; font-weight: 700; color: #fff; }
+.cf-total-val { display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 700; color: #fff; }
+
+/* ACTIONS */
+.acts { display: flex; align-items: center; gap: 8px; margin-top: 18px; }
+.btn-a {
+  padding: 9px 16px; border-radius: 8px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  font-family: inherit; border: 1px solid #444;
+  background: #2c2c2c; color: #ccc; transition: all 0.12s;
+}
+.btn-a:hover { background: #383838; color: #fff; }
+.btn-a.r { margin-left: auto; }
+.btn-a.grey { background: #d4d4d4; color: #111; border-color: #d4d4d4; }
+.btn-a.grey:hover { background: #eee; }
+.btn-a.grey:disabled { background: #3a3a3a; color: #666; border-color: #3a3a3a; cursor: not-allowed; }
+.btn-a.blue { background: transparent; color: #5ba8e5; border-color: #3a3a3a; }
+.btn-a.blue:hover { background: #1a2a38; color: #7bbfff; }
+.btn-a.blue:disabled { color: #555; cursor: not-allowed; }
+
+/* SUCCESS */
+.suc-wrap { text-align: center; padding: 8px 0 4px; }
+.suc-circle {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: rgba(34,197,94,0.1); border: 2px solid #22c55e;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin: 0 auto 14px;
+  animation: pop 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.suc-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+.suc-sub { font-size: 12px; color: #777; }
+
+.spinner {
+  display: inline-block; width: 13px; height: 13px;
+  border: 2px solid rgba(0,0,0,0.2); border-top-color: #111;
+  border-radius: 50%; animation: spin 0.65s linear infinite; vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sb-logo">
+    <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+      <path d="M5 8.5L8.5 20L20 23L23.5 11.5L5 8.5Z" fill="#e31e24"/>
+    </svg>
+  </div>
+  <div class="sb-item" title="Home">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    <span>Home</span>
+  </div>
+  <div class="sb-item" title="Creations">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+    <span>Create</span>
+  </div>
+  <div class="sb-item" title="Learn">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+    <span>Learn</span>
+  </div>
+  <div class="sb-item" title="Store">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4v2l16 .01V4zm1 5H3l1 9h16l1-9z"/></svg>
+    <span>Store</span>
+  </div>
+  <div class="sb-item" title="Forum">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    <span>Forum</span>
+  </div>
+  <div class="sb-item" title="Updates">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+    <span>Updates</span>
+  </div>
+  <div class="sb-item active" title="Finances">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+    <span>Finance</span>
+  </div>
+  <div class="sb-item" title="Analytics">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+    <span>Analytics</span>
+  </div>
+  <div class="sb-item" title="Collab">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+    <span>Collab</span>
+  </div>
+  <div class="sb-item" title="Ads">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
+    <span>Ads</span>
+  </div>
+  <div class="sb-item" title="All Tools">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+    <span>Tools</span>
+  </div>
+</nav>
+
+<!-- LEFT NAV -->
+<div class="leftnav">
+  <div class="leftnav-title">Finances</div>
+  <div class="lnav-item">DevEx</div>
+  <div class="lnav-item active">Payouts</div>
+  <div class="lnav-item">Transactions</div>
+  <div class="lnav-sep"></div>
+  <div class="lnav-sub">Billing</div>
+  <div class="lnav-sub">Payments</div>
+  <div class="lnav-sub">Account Information</div>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-ham">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </div>
+    <div class="topbar-title">Payouts</div>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-icon"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+    <div class="topbar-icon"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div>
+    <div class="topbar-avatar"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="page-title">Payouts</div>
+  <div class="page-desc">Group payouts enables you to distribute Earned Robux with collaborators who helped you develop content on Roblox. Only Group members that have participated in collaborating on this content are eligible for payouts.</div>
+
+  <!-- FUNDS ROW — flat, no card -->
+  <div class="funds-row">
+    <div>
+      <div class="funds-label">Group Funds</div>
+      <div class="funds-sub">Robux in your group's account</div>
+      <div class="funds-val">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="#ccc"/>
+        </svg>
+        <span id="groupFunds">32,123,854</span>
+      </div>
+    </div>
+    <div>
+      <div class="send-label">Send a One-Time Payout</div>
+      <div class="send-sub">Give Robux to your collaborators</div>
+      <button class="btn-send on" onclick="openModal()">Send Robux</button>
+    </div>
+  </div>
+
+  <div class="hdivider"></div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active" onclick="setTab(this)">Group</div>
+    <div class="tab" onclick="setTab(this)">Experiences</div>
+  </div>
+
+  <!-- SPLITS + DONUT side by side -->
+  <div class="splits-donut-row">
+    <div class="splits-wrap">
+      <div class="splits-header">
+        <div class="splits-title">Splits</div>
+        <div class="splits-pencil">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        </div>
+      </div>
+      <div class="splits-line"></div>
+      <div class="splits-row">
+        <div class="group-thumb">⭐</div>
+        <div class="splits-info">
+          <div class="splits-name">StarCode Studio</div>
+          <div class="splits-id">896321250</div>
+        </div>
+        <div class="splits-pct">100 %</div>
+      </div>
+    </div>
+
+    <!-- DONUT right next to splits -->
+    <div class="donut-wrap">
+      <svg width="250" height="220" viewBox="0 0 250 220">
+        <circle cx="125" cy="105" r="78" fill="none" stroke="#222" stroke-width="40"/>
+        <circle cx="125" cy="105" r="78" fill="none" stroke="#00a2ff" stroke-width="40"
+          stroke-dasharray="490.09" stroke-dashoffset="0"
+          transform="rotate(-90 125 105)"/>
+        <text x="125" y="96" text-anchor="middle" fill="#888" font-size="13" font-family="sans-serif" font-weight="600">Total Splits</text>
+        <text x="125" y="123" text-anchor="middle" fill="#fff" font-size="30" font-family="sans-serif" font-weight="700">1</text>
+      </svg>
+      <div class="donut-legend">
+        <div class="donut-dot"></div>
+        <div>
+          <div style="color:#ccc;font-weight:600;font-size:11px;">StarCode S...</div>
+          <div style="color:#777;font-size:11px;">100%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MODAL ════ -->
+<div class="overlay" id="overlay" onclick="bgClose(event)">
+  <div class="modal">
+
+    <!-- STEP 1: Search -->
+    <div id="s1">
+      <div class="modal-title">Send a One-Time Payout</div>
+      <div class="search-wrap" style="margin-bottom:6px;">
+        <div class="search-ico"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <input class="search-inp" id="uInput" type="text" placeholder="Search username..." autocomplete="off" oninput="doSearch(this.value)">
+      </div>
+      <div class="err show" id="sErr" style="display:none;">User not found. Try another username.</div>
+      <div class="dropdown" id="dropDown"></div>
+      <!-- Selected card like Image 1 -->
+      <div class="sel-card" id="selCard">
+        <div class="u-av" id="selAv"></div>
+        <div>
+          <div class="u-name" id="selName"></div>
+          <div class="u-at" id="selAt"></div>
+        </div>
+        <span class="sel-x" onclick="clearSel()">✕</span>
+      </div>
+      <div class="acts">
+        <button class="btn-a" onclick="closeModal()">Cancel</button>
+        <button class="btn-a blue r" id="s1Btn" onclick="toS2()" disabled>Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Amount — Image 5 layout -->
+    <div id="s2" style="display:none;">
+      <div class="modal-title">Send to Creators</div>
+      <!-- Total top right -->
+      <div class="amt-top">
+        <div class="amt-top-lbl">Total</div>
+        <div class="amt-top-val">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="#ccc"/></svg>
+          <span id="totalDisp">0</span>
+        </div>
+      </div>
+      <!-- User + Amount field -->
+      <div class="amt-row">
+        <div class="amt-user">
+          <div class="u-av" id="s2Av"></div>
+          <div>
+            <div class="u-name" id="s2Name"></div>
+            <div class="u-at" id="s2At"></div>
+          </div>
+        </div>
+        <div class="amt-field">
+          <span class="amt-field-lbl">Amount</span>
+          <div class="amt-field-inner">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="#888"/></svg>
+            <input class="amt-inp" id="amtInp" type="number" min="1" oninput="chkAmt()">
+          </div>
+          <div class="err" id="amtErr"></div>
+        </div>
+      </div>
+      <div class="acts">
+        <button class="btn-a" onclick="closeModal()">Cancel</button>
+        <button class="btn-a" onclick="toStep(1)">Back</button>
+        <button class="btn-a blue r" id="s2Btn" onclick="toS3()" disabled>Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Confirm — Image 6 layout -->
+    <div id="s3" style="display:none;">
+      <div class="modal-title">Confirm Payout</div>
+      <div class="cf-sec">
+        <div class="cf-lbl">From</div>
+        <div class="cf-party">
+          <div class="cf-thumb">⭐</div>
+          <div>
+            <div class="cf-name">StarCode Studio</div>
+            <div class="cf-id">896321250</div>
+          </div>
+        </div>
+      </div>
+      <div class="cf-sec">
+        <div class="cf-lbl">To</div>
+        <div class="cf-party" id="confTo"></div>
+      </div>
+      <div class="cf-div"></div>
+      <div class="cf-total">
+        <div class="cf-total-lbl">Total</div>
+        <div class="cf-total-val">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="#ccc"/></svg>
+          <span id="confTotal">0</span>
+        </div>
+      </div>
+      <div class="acts">
+        <button class="btn-a" onclick="closeModal()">Cancel</button>
+        <button class="btn-a" onclick="toStep(2)">Back</button>
+        <button class="btn-a grey r" id="confBtn" onclick="doPayout()">Confirm</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div id="s4" style="display:none;">
+      <div class="suc-wrap">
+        <div class="suc-circle">✓</div>
+        <div class="suc-title">Payout Sent!</div>
+        <div class="suc-sub" id="sucMsg"></div>
+      </div>
+      <div class="acts" style="justify-content:center;">
+        <button class="btn-a grey" onclick="closeModal()">Done</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+let funds = 32123854, picked = null, timer = null;
+const PROXY = 'https://corsproxy.io/?';
+
+async function robloxSearch(name) {
+  try {
+    const r1 = await fetch(PROXY + encodeURIComponent('https://users.roblox.com/v1/usernames/users'), {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ usernames: [name], excludeBannedUsers: false })
+    });
+    const d1 = await r1.json();
+    if (!d1.data?.length) return null;
+    const u = d1.data[0];
+    let avatar = null;
+    try {
+      const r2 = await fetch(PROXY + encodeURIComponent(`https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${u.id}&size=150x150&format=Png&isCircular=true`));
+      const d2 = await r2.json();
+      avatar = d2.data?.[0]?.imageUrl || null;
+    } catch {}
+    return { id: u.id, name: u.name, displayName: u.displayName, avatar };
+  } catch { return null; }
+}
+
+function doSearch(val) {
+  clearTimeout(timer);
+  const dd = document.getElementById('dropDown');
+  const err = document.getElementById('sErr');
+  if (picked) return;
+  if (val.trim().length < 2) { dd.classList.remove('show'); err.style.display='none'; return; }
+  timer = setTimeout(async () => {
+    dd.innerHTML = `<div style="padding:12px;text-align:center;color:#666;font-size:13px;"><span style="display:inline-block;width:13px;height:13px;border:2px solid #444;border-top-color:#aaa;border-radius:50%;animation:spin 0.65s linear infinite;vertical-align:middle;"></span></div>`;
+    dd.classList.add('show'); err.style.display='none';
+    const user = await robloxSearch(val.trim());
+    if (!user) { dd.classList.remove('show'); err.style.display='block'; return; }
+    err.style.display='none';
+    const av = user.avatar ? `<img src="${user.avatar}" alt="" style="width:100%;height:100%;object-fit:cover;">` : user.name[0].toUpperCase();
+    dd.innerHTML = `<div class="drop-item" onclick='pickUser(${JSON.stringify(user).replace(/'/g,"&#39;")})'>
+      <div class="u-av">${av}</div>
+      <div><div class="u-name">${user.displayName}</div><div class="u-at">@${user.name}</div></div>
+    </div>`;
+    dd.classList.add('show');
+  }, 500);
+}
+
+function pickUser(user) {
+  picked = user;
+  document.getElementById('uInput').value = user.name;
+  document.getElementById('dropDown').classList.remove('show');
+  document.getElementById('sErr').style.display = 'none';
+  const av = document.getElementById('selAv');
+  av.innerHTML = user.avatar ? `<img src="${user.avatar}" alt="" style="width:100%;height:100%;object-fit:cover;">` : user.name[0].toUpperCase();
+  document.getElementById('selName').textContent = user.displayName;
+  document.getElementById('selAt').textContent = '@' + user.name;
+  document.getElementById('selCard').classList.add('show');
+  document.getElementById('s1Btn').disabled = false;
+}
+
+function clearSel() {
+  picked = null;
+  document.getElementById('uInput').value = '';
+  document.getElementById('selCard').classList.remove('show');
+  document.getElementById('s1Btn').disabled = true;
+}
+
+function chkAmt() {
+  const v = parseInt(document.getElementById('amtInp').value) || 0;
+  document.getElementById('totalDisp').textContent = v ? v.toLocaleString() : '0';
+  const err = document.getElementById('amtErr'), btn = document.getElementById('s2Btn');
+  if (v <= 0) { err.textContent='Enter a valid amount.'; err.classList.add('show'); btn.disabled=true; }
+  else if (v > funds) { err.textContent=`Max: ${funds.toLocaleString()}`; err.classList.add('show'); btn.disabled=true; }
+  else { err.classList.remove('show'); btn.disabled=false; }
+}
+
+function toS2() {
+  const u = picked;
+  const av = u.avatar ? `<img src="${u.avatar}" alt="" style="width:100%;height:100%;object-fit:cover;">` : u.name[0].toUpperCase();
+  document.getElementById('s2Av').innerHTML = av;
+  document.getElementById('s2Name').textContent = u.displayName;
+  document.getElementById('s2At').textContent = '@' + u.name;
+  toStep(2);
+}
+
+function toS3() {
+  const amt = parseInt(document.getElementById('amtInp').value) || 0;
+  if (amt <= 0 || amt > funds) return;
+  const u = picked;
+  const avEl = u.avatar
+    ? `<img src="${u.avatar}" style="width:36px;height:36px;border-radius:8px;object-fit:cover;">`
+    : `<div style="width:36px;height:36px;border-radius:8px;background:#444;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:14px;flex-shrink:0;">${u.name[0].toUpperCase()}</div>`;
+  document.getElementById('confTo').innerHTML = `
+    ${avEl}
+    <div style="flex:1;padding-left:10px;">
+      <div class="cf-name">${u.displayName}</div>
+      <div class="cf-id">@${u.name}</div>
+    </div>
+    <div class="cf-right">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="#ccc"/></svg>
+      ${amt.toLocaleString()}
+    </div>`;
+  document.getElementById('confTotal').textContent = amt.toLocaleString();
+  toStep(3);
+}
+
+function toStep(n) {
+  ['s1','s2','s3','s4'].forEach((id,i) => document.getElementById(id).style.display = i===n-1?'block':'none');
+}
+
+async function doPayout() {
+  const btn = document.getElementById('confBtn');
+  const amt = parseInt(document.getElementById('amtInp').value) || 0;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>';
+  await new Promise(r => setTimeout(r, 1300));
+  funds -= amt;
+  document.getElementById('groupFunds').textContent = funds.toLocaleString();
+  document.getElementById('sucMsg').textContent = `${amt.toLocaleString()} Robux sent to ${picked.displayName}.`;
+  toStep(4);
+}
+
+function openModal() { reset(); document.getElementById('overlay').classList.add('open'); }
+function closeModal() { document.getElementById('overlay').classList.remove('open'); }
+function bgClose(e) { if (e.target.id==='overlay') closeModal(); }
+
+function reset() {
+  picked = null;
+  document.getElementById('uInput').value = '';
+  document.getElementById('dropDown').classList.remove('show');
+  document.getElementById('sErr').style.display = 'none';
+  document.getElementById('selCard').classList.remove('show');
+  document.getElementById('s1Btn').disabled = true;
+  document.getElementById('amtInp').value = '';
+  document.getElementById('totalDisp').textContent = '0';
+  document.getElementById('amtErr').classList.remove('show');
+  document.getElementById('s2Btn').disabled = true;
+  const cb = document.getElementById('confBtn');
+  cb.disabled=false; cb.innerHTML='Confirm';
+  toStep(1);
+}
+
+function setTab(el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>

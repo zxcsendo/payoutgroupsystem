@@ -27,9 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navItems.forEach(item => {
         item.addEventListener('click', (e) => {
-            e.preventDefault();
             const sectionId = item.getAttribute('data-section');
-            showSection(sectionId);
+            if (sectionId) {
+                showSection(sectionId);
+            }
+        });
+    });
+
+    // Handle global sidebar active state (visual only for now)
+    const globalItems = document.querySelectorAll('.global-nav-item');
+    globalItems.forEach(item => {
+        item.addEventListener('click', () => {
+            globalItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
         });
     });
 

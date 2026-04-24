@@ -5,49 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creator Dashboard - Roblox</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://www.roblox.com/favicon.ico">
 </head>
 <body>
     <!-- Global Sidebar (Far Left) -->
     <aside class="global-sidebar">
         <div class="logo-container">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <rect x="20" y="20" width="60" height="60" fill="white" transform="rotate(15 50 50)" />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V20H4V4ZM9 9H15V15H9V9Z" fill="black"/>
             </svg>
         </div>
-        <nav>
-            <div class="global-nav-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                <span>Home</span>
-            </div>
-            <div class="global-nav-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                <span>Creations</span>
-            </div>
-            <div class="global-nav-item">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                <span>Learn</span>
-            </div>
-            <div class="global-nav-item active">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>Finances</span>
-            </div>
-        </nav>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+            <span>Creations</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+            <span>Learn</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4v2l16 .01V4zm1 5H3l1 9h16l1-9zM9 17H7v-4h2v4zm4 0h-2v-4h2v4zm4 0h-2v-4h2v4z"/></svg>
+            <span>Store</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <span>Forum</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+            <span>Updates</span>
+        </div>
+        <div class="global-nav-item active">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+            <span>Finances</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            <span>Analytics</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            <span>Collab</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
+            <span>Ads</span>
+        </div>
+        <div class="global-nav-item">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+            <span>All tools</span>
+        </div>
     </aside>
 
-    <!-- Context Sidebar (Finances) -->
+    <!-- Context Sidebar -->
     <aside class="context-sidebar">
         <div class="sidebar-title">Finances</div>
         <div class="nav-group">
-            <a href="#" class="nav-item" data-section="devex">DevEx</a>
-            <a href="#" class="nav-item active" data-section="payouts">Payouts</a>
-            <a href="#" class="nav-item" data-section="transactions">Transactions</a>
+            <div class="nav-item" data-section="devex">DevEx</div>
+            <div class="nav-item active" data-section="payouts">Payouts</div>
+            <div class="nav-item" data-section="transactions">Transactions</div>
         </div>
         <div class="divider"></div>
         <div class="nav-group">
-            <a href="#" class="nav-item" data-section="billing">Billing <span style="font-size: 10px; background: #313339; padding: 2px 6px; border-radius: 4px; margin-left: auto;">Beta</span></a>
-            <a href="#" class="nav-item" data-section="payments">Payments <span style="font-size: 10px; background: #313339; padding: 2px 6px; border-radius: 4px; margin-left: auto;">Beta</span></a>
-            <a href="#" class="nav-item" data-section="account-info">Account Information</a>
+            <div class="nav-item" data-section="billing">Billing</div>
+            <div class="nav-item" data-section="payments">Payments</div>
+            <div class="nav-item" data-section="account-info">Account Information</div>
         </div>
     </aside>
 
@@ -55,19 +80,19 @@
     <div class="main-wrapper">
         <header>
             <div class="header-left">
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <div class="header-icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </div>
                 <div class="breadcrumb" id="breadcrumb">Payouts</div>
             </div>
             <div class="header-right">
-                <div class="icon-btn">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <div class="header-icon">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 </div>
-                <div class="icon-btn">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                <div class="header-icon">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
                 </div>
-                <div class="profile-circle">
-                    <img src="https://tr.rbxcdn.com/30day/avatar-headshot/150x150/png" alt="Profile">
-                </div>
+                <div class="profile-img"></div>
             </div>
         </header>
 
@@ -83,42 +108,97 @@
                         <div class="card-label">Group Funds</div>
                         <div class="card-subtext">Robux in your group's account</div>
                         <div class="robux-display">
-                            <img src="https://static.wikia.nocookie.net/roblox/images/6/60/Robux_2019.svg" class="robux-icon" alt="Robux">
-                            <span>12,450,230</span>
+                            <svg class="robux-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="white"/>
+                            </svg>
+                            <span>0</span>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-label">Send a One-Time Payout</div>
                         <div class="card-subtext">Give Robux to your collaborators</div>
-                        <button class="btn btn-secondary">Send Robux</button>
+                        <button class="btn btn-secondary" onclick="alert('Send Robux Clicked')">Send Robux</button>
                     </div>
                 </div>
 
-                <div class="tabs">
-                    <button class="tab">Group</button>
-                    <button class="tab active">Experiences</button>
+                <div class="tabs-container">
+                    <button class="tab-pill">Group</button>
+                    <button class="tab-pill active">Experiences</button>
                 </div>
 
-                <div class="experience-list">
-                    <div class="experience-item">
-                        <div class="exp-info">
-                            <img src="experience_thumb.png" class="exp-thumb" alt="Paradise Hangout">
-                            <div class="exp-details">
-                                <h3>Paradise Hangout</h3>
+                <div class="exp-table">
+                    <!-- Paradise Hangout Entry -->
+                    <div class="exp-row">
+                        <div class="exp-main">
+                            <img src="experience_thumb.png" class="exp-img" alt="Experience">
+                            <div class="exp-name-id">
+                                <h3>[SOON] Paradise Hangout 🌴</h3>
                                 <p>107637013991129</p>
                             </div>
                         </div>
-                        <div class="exp-stats">
-                            <div class="stat-group">
-                                <span class="stat-label">Group Earnings</span>
-                                <span class="stat-value">100%</span>
+                        <div class="exp-right">
+                            <div class="exp-col">
+                                <span class="exp-col-label">Group Earnings</span>
+                                <span class="exp-col-val">100%</span>
                             </div>
-                            <div class="stat-group">
-                                <span class="stat-label">Splits</span>
-                                <span class="stat-value">1</span>
+                            <div class="exp-col">
+                                <span class="exp-col-label">Splits</span>
+                                <span class="exp-col-val">1</span>
                             </div>
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                         </div>
+                    </div>
+
+                    <!-- Fake extra entries from screenshot -->
+                    <div class="exp-row">
+                        <div class="exp-main">
+                            <div class="exp-img" style="background:#222; display:flex; align-items:center; justify-content:center;">🏠</div>
+                            <div class="exp-name-id">
+                                <h3>[NEW] HIRAYA HANGOUT</h3>
+                                <p>8971481841</p>
+                            </div>
+                        </div>
+                        <div class="exp-right">
+                            <div class="exp-col">
+                                <span class="exp-col-label">Group Earnings</span>
+                                <span class="exp-col-val">100%</span>
+                            </div>
+                            <div class="exp-col">
+                                <span class="exp-col-label">Splits</span>
+                                <span class="exp-col-val">1</span>
+                            </div>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="exp-row">
+                        <div class="exp-main">
+                            <div class="exp-img" style="background:#222; display:flex; align-items:center; justify-content:center;">🌄</div>
+                            <div class="exp-name-id">
+                                <h3>[REMAP] Hiraya Hangout</h3>
+                                <p>9016188256</p>
+                            </div>
+                        </div>
+                        <div class="exp-right">
+                            <div class="exp-col">
+                                <span class="exp-col-label">Group Earnings</span>
+                                <span class="exp-col-val">100%</span>
+                            </div>
+                            <div class="exp-col">
+                                <span class="exp-col-label">Splits</span>
+                                <span class="exp-col-val">1</span>
+                            </div>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-footer">
+                    <span>Rows per page: 10 <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M7 10l5 5 5-5z"/></svg></span>
+                    <span>1-3 of 3</span>
+                    <div style="display:flex; gap:16px;">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
                     </div>
                 </div>
             </section>
@@ -126,142 +206,132 @@
             <!-- DEVEX SECTION -->
             <section id="devex" class="section">
                 <h1>DevEx</h1>
-                <div class="devex-progress">
-                    <div class="circular-progress">
-                        0%
+                <div class="devex-banner">
+                    <div class="circular-progress">0%</div>
+                    <div class="devex-details">
+                        <div class="card-subtext" style="color:#FFFFFF; margin-bottom:4px;">Keep it up, earn more to cash out!</div>
+                        <h2>
+                            <svg class="robux-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="white"/>
+                            </svg>
+                            1,250,000 eligible *
+                        </h2>
+                        <div class="devex-rate">Current rate: <svg class="robux-icon" style="width:12px; height:12px;" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L14.928 4V12L8 16L1.072 12V4L8 0ZM8 2.18L3 5.09V10.91L8 13.82L13 10.91V5.09L8 2.18ZM8 4.5L11 6.25V9.75L8 11.5L5 9.75V6.25L8 4.5Z" fill="#65666A"/></svg> 10,000 converts to $35.00 USD ⓘ</div>
                     </div>
-                    <div class="eligible-info">
-                        <p>Keep it up, earn more to cash out!</p>
-                        <div class="robux-display">
-                            <img src="https://static.wikia.nocookie.net/roblox/images/6/60/Robux_2019.svg" class="robux-icon" alt="Robux">
-                            <span>350 Eligible *</span>
-                        </div>
-                        <p>Current rate: 10,000 converts to $35.00 USD</p>
-                    </div>
-                    <button class="btn btn-secondary" style="margin-left: auto;" disabled>Cash Out</button>
+                    <button class="btn btn-secondary" disabled>Cash Out</button>
                 </div>
-                <p class="description">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox. Once you earn 30,000 Robux or more, you are eligible to convert your virtual earnings to real-world cash.</p>
+                <p class="description" style="margin-bottom:12px;">* Earned funds can take up to 72 hours to appear in estimated balance eligible for DevEx.</p>
+                <p class="description">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox. Once you earn 30,000 Robux or more, you are eligible to convert your virtual earnings to real-world cash. Your current eligible robux estimate is based on your earnings history and previous Developer Exchange requests. This figure updates daily, but due to processing requirements, this estimate may lag by about three days and requesting this amount is not a guarantee of a completed DevEx request.</p>
                 
-                <div class="requirement-list">
-                    <div class="requirement-item">
-                        <span class="check-icon">✓</span> Minimum of 30,000 earned Robux in your account
-                    </div>
-                    <div class="requirement-item">
-                        <span class="check-icon">✓</span> Have a verified email address
-                    </div>
-                    <div class="requirement-item">
-                        <span class="check-icon">✓</span> Valid DevEx portal account
-                    </div>
-                    <div class="requirement-item">
-                        <span class="check-icon">✓</span> 13 years of age or older
-                    </div>
-                    <div class="requirement-item">
-                        <span class="check-icon">✓</span> Community member in good standing
-                    </div>
+                <div class="checklist">
+                    <p class="description" style="color:#FFFFFF; font-weight:600; margin-bottom:16px;">To use DevEx, you must agree to DevEx Terms of Use and meet the simple requirements set out in those Terms, some of which are as follows:</p>
+                    <div class="check-item"><span class="check-icon">✓</span> Minimum of 30,000 earned Robux in your account</div>
+                    <div class="check-item"><span class="check-icon">✓</span> Have a verified email address</div>
+                    <div class="check-item"><span class="check-icon">✓</span> Valid DevEx portal account</div>
+                    <div class="check-item"><span class="check-icon">✓</span> 13 years of age or older</div>
+                    <div class="check-item"><span class="check-icon">✓</span> Community member in good standing, having complied with Roblox's <a href="#" style="color:#0084FF; text-decoration:none;">Terms of Use</a></div>
                 </div>
             </section>
 
             <!-- BILLING SECTION -->
             <section id="billing" class="section">
-                <h1>Billing <span style="font-size: 14px; background: #313339; padding: 4px 8px; border-radius: 4px; vertical-align: middle; margin-left: 8px;">Beta</span></h1>
-                <div class="tabs">
-                    <button class="tab active">Extended Services</button>
+                <h1>Billing <span style="font-size:12px; background:#313339; padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:4px;">Beta</span></h1>
+                <div class="billing-nav">
+                    <div class="billing-nav-item">Extended Services</div>
                 </div>
-                
                 <div class="card-row">
                     <div class="card">
                         <div class="card-label">Cost Summary</div>
-                        <div style="display: flex; gap: 48px; margin-top: 16px;">
+                        <div style="display:flex; gap:64px; margin-top:16px;">
                             <div>
                                 <div class="card-subtext">Pending balance</div>
-                                <div style="font-size: 20px; font-weight: 700;">$0.00</div>
+                                <div style="font-size:20px; font-weight:700;">$0.00</div>
                             </div>
                             <div>
                                 <div class="card-subtext">Month to Date cost</div>
-                                <div style="font-size: 20px; font-weight: 700;">$0.00</div>
+                                <div style="font-size:20px; font-weight:700;">$0.00 ⓘ</div>
                             </div>
                         </div>
-                        <p class="card-subtext" style="margin-top: 16px;">A bill will be generated on your billing date each month, or when your outstanding balance reaches $10.00. <a href="#" style="color: var(--accent-blue);">Learn more.</a></p>
+                        <p class="card-subtext" style="margin-top:16px;">A bill will be generated on your billing date each month, or when your outstanding balance reaches $10.00. <a href="#" style="color:#0084FF; text-decoration:none;">Learn more.</a></p>
                     </div>
                     <div class="card">
                         <div class="card-label">Payment Method</div>
-                        <div style="margin-top: 16px; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
-                            <span>No payment options available</span>
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <div style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px 12px; display:flex; justify-content:space-between; align-items:center; margin-top:12px; cursor:pointer;">
+                            <span style="font-size:13px;">No payment options available</span>
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                         </div>
-                        <p class="card-subtext" style="margin-top: 16px;">This payment method applies to all experiences on this account. A $1.00 USD temporary authorization hold may be placed on your card.</p>
+                        <p class="card-subtext" style="margin-top:12px;">This payment method applies to all experiences on this account. A $1.00 USD temporary authorization hold may be placed on your card.</p>
                     </div>
                 </div>
-
-                <div style="margin-top: 48px;">
-                    <h2 style="font-size: 18px; margin-bottom: 16px;">Billing history</h2>
-                    <p class="description">Your billing activity for Extended Services usage across experiences.</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="2" style="text-align: center; padding: 48px;">No Data</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2 style="font-size:18px; margin-top:32px; margin-bottom:8px;">Billing history</h2>
+                <p class="description">Your billing activity for Extended Services usage across experiences.</p>
+                <div style="display:flex; gap:12px; margin-bottom:24px;">
+                    <div style="background:#191B1F; border:1px solid #313339; border-radius:6px; padding:8px 12px; flex:1; display:flex; justify-content:space-between; align-items:center;">
+                        <span style="font-size:13px; color:#BDC3C7;">Start Month</span>
+                        <span style="font-size:13px;">March 2026 📅</span>
+                    </div>
+                    <div style="background:#191B1F; border:1px solid #313339; border-radius:6px; padding:8px 12px; flex:1; display:flex; justify-content:space-between; align-items:center;">
+                        <span style="font-size:13px; color:#BDC3C7;">End Month</span>
+                        <span style="font-size:13px;">April 2026 📅</span>
+                    </div>
                 </div>
+                <div style="display:flex; border-bottom:1px solid #313339; padding-bottom:8px; margin-bottom:8px;">
+                    <div style="flex:1; font-size:11px; color:#65666A; font-weight:700;">DATE</div>
+                    <div style="flex:1; font-size:11px; color:#65666A; font-weight:700;">AMOUNT</div>
+                </div>
+                <div style="text-align:center; padding:40px; color:#BDC3C7; font-size:13px;">No Data</div>
             </section>
 
             <!-- PAYMENTS SECTION -->
             <section id="payments" class="section">
-                <h1>Payments <span style="font-size: 14px; background: #313339; padding: 4px 8px; border-radius: 4px; vertical-align: middle; margin-left: 8px;">Beta</span></h1>
-                <h2 style="font-size: 20px; margin-bottom: 16px; margin-top: 32px;">Payment Methods</h2>
+                <h1>Payments <span style="font-size:12px; background:#313339; padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:4px;">Beta</span></h1>
+                <h2 style="font-size:18px; margin-top:24px; margin-bottom:16px;">Payment Methods</h2>
                 
-                <div class="card" style="margin-top: 24px;">
-                    <div style="display: flex; align-items: center; gap: 16px;">
-                        <div style="width: 48px; height: 32px; background: #2C2E33; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">VISA</div>
+                <div class="card" style="margin-bottom:24px;">
+                    <div style="display:flex; align-items:center; gap:16px;">
+                        <div style="width:48px; height:32px; background:#0B0D0F; border:1px solid #313339; border-radius:4px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:10px;">VISA</div>
                         <div>
-                            <div style="font-size: 14px; font-weight: 600;">Visa ending in 4444</div>
-                            <div style="font-size: 12px; color: var(--text-secondary);">Expires 12/2028</div>
+                            <div style="font-size:14px; font-weight:600;">Visa ending in 4444</div>
+                            <div style="font-size:12px; color:#65666A;">Expires 12/2028</div>
                         </div>
-                        <div style="margin-left: auto; color: var(--text-secondary); cursor: pointer;">Edit</div>
+                        <div style="margin-left:auto; color:#0084FF; font-size:13px; font-weight:600; cursor:pointer;">Edit</div>
                     </div>
                 </div>
 
-                <button class="btn btn-primary" style="margin-top: 24px;">Add Payment Method</button>
+                <button class="btn btn-primary">Add Payment Method</button>
             </section>
 
             <!-- ACCOUNT INFO SECTION -->
             <section id="account-info" class="section">
                 <h1>Account Information</h1>
-                <div class="tabs">
-                    <button class="tab active">Core Account Info</button>
-                    <button class="tab">Legal Address</button>
-                    <button class="tab">Invoicing</button>
+                <div class="billing-nav">
+                    <div class="billing-nav-item">Core Account Info</div>
+                    <div class="billing-nav-item" style="border:none; color:#BDC3C7;">Legal Address</div>
+                    <div class="billing-nav-item" style="border:none; color:#BDC3C7;">Invoicing</div>
                 </div>
 
-                <div style="max-width: 600px; margin-top: 32px;">
-                    <div style="margin-bottom: 24px;">
-                        <label class="stat-label">Entity Name *</label>
-                        <input type="text" value="Zxcsendo Studios" style="width: 100%; background: #1B1D21; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; color: white; margin-top: 8px;">
-                        <p class="card-subtext" style="margin-top: 8px;">This is how your name or business will appear on the invoice.</p>
+                <div style="max-width:800px;">
+                    <div style="margin-bottom:24px;">
+                        <label style="font-size:12px; font-weight:700; display:block; margin-bottom:8px;">Entity Name *</label>
+                        <input type="text" value="Zxcsendo Studios" style="width:100%; background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px; color:white;">
+                        <p class="description" style="margin-top:4px; font-size:11px;">This is how your name or business will appear on the invoice.</p>
                     </div>
 
-                    <div style="display: flex; gap: 16px; margin-bottom: 32px;">
-                        <div style="flex: 1;">
-                            <label class="stat-label">Tax ID Type (Optional)</label>
-                            <div style="width: 100%; background: #1B1D21; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; color: white; margin-top: 8px; display: flex; justify-content: space-between;">
-                                <span>Select type</span>
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <div style="display:flex; gap:16px; margin-bottom:32px;">
+                        <div style="flex:1;">
+                            <label style="font-size:12px; font-weight:700; display:block; margin-bottom:8px;">Tax ID Type (Optional)</label>
+                            <div style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px; display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-size:13px; color:#65666A;">Select type</span>
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                             </div>
                         </div>
-                        <div style="flex: 1;">
-                            <label class="stat-label">Tax ID (Optional)</label>
-                            <input type="text" placeholder="Enter Tax ID" style="width: 100%; background: #1B1D21; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; color: white; margin-top: 8px;">
+                        <div style="flex:1;">
+                            <label style="font-size:12px; font-weight:700; display:block; margin-bottom:8px;">Tax ID (Optional)</label>
+                            <input type="text" placeholder="Enter Tax ID" style="width:100%; background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px; color:white;">
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 12px;">
+                    <div style="display:flex; gap:12px;">
                         <button class="btn btn-secondary">Cancel</button>
                         <button class="btn btn-secondary" disabled>Update</button>
                     </div>
@@ -271,22 +341,21 @@
         </main>
 
         <footer>
-            <div class="footer-links">
+            <div class="footer-left">
                 <span>©2026 Roblox Corporation. All rights reserved.</span>
-                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Terms</a>
-                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Privacy</a>
-                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Accessibility</a>
-                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Support</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Terms</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Privacy</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Accessibility</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Support</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Your Privacy Choices ☑️</a>
             </div>
-            <div style="display: flex; align-items: center; gap: 24px;">
-                <div class="social-icons">
-                    <!-- Placeholder social icons -->
-                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            <div class="footer-right">
+                <div style="display:flex; gap:12px;">
+                    <!-- Social icons -->
+                    𝕏 🅵 🅘 🅸 🆈
                 </div>
-                <div class="language-selector">
-                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span>English</span>
+                <div style="background:#191B1F; border:1px solid #313339; border-radius:20px; padding:4px 12px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+                    🌐 <span>English</span>
                 </div>
             </div>
         </footer>

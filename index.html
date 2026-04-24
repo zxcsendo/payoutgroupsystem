@@ -121,9 +121,9 @@
                     </div>
                 </div>
 
-                <div class="tabs-nav">
-                    <button class="tab-btn active" onclick="setPayoutTab(this, 'group')">Group</button>
-                    <button class="tab-btn" onclick="setPayoutTab(this, 'exp')">Experiences</button>
+                <div class="tabs-nav" style="border:none; margin-bottom:12px;">
+                    <button class="tab-btn active" style="padding:6px 16px; border-radius:20px;" onclick="setPayoutTab(this, 'group')">Group</button>
+                    <button class="tab-btn" style="padding:6px 16px; border-radius:20px;" onclick="setPayoutTab(this, 'exp')">Experiences</button>
                 </div>
 
                 <div id="payout-group">
@@ -135,9 +135,7 @@
                             </div>
                             <div class="splits-box">
                                 <div class="split-item">
-                                    <div class="split-thumb">
-                                        <img src="experience_thumb.png" alt="Hiraya Logo">
-                                    </div>
+                                    <div class="split-thumb"><img src="experience_thumb.png"></div>
                                     <div class="split-info">
                                         <div class="split-name">Hiraya Community</div>
                                         <div class="split-id">896321250</div>
@@ -157,35 +155,177 @@
                                     <div class="donut-center-val">1</div>
                                 </div>
                             </div>
-                            <div style="margin-top:12px; display:flex; align-items:center; gap:8px; font-size:11px;">
-                                <div style="width:8px; height:8px; border-radius:50%; background:#0084FF;"></div>
-                                <span>Hiraya Com...<br><span style="color:#65666A;">100%</span></span>
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="payout-exp" style="display:none;">
-                    <div class="exp-row-plain">
+                    <div class="exp-card-row">
                         <div style="display:flex; align-items:center; gap:12px;">
                             <img src="experience_thumb.png" style="width:40px; height:40px; border-radius:4px;">
                             <div>
-                                <div style="font-size:13px; font-weight:700;">[SOON] Paradise Hangout 🌴</div>
-                                <div style="font-size:11px; color:#65666A;">107637013991129</div>
+                                <div style="font-size:13px; font-weight:700;">[SOON] Hiraya Hangout 🌴</div>
+                                <div style="font-size:11px; color:#65666A;">8480412603</div>
                             </div>
                         </div>
-                        <div class="exp-stats-inline">
-                            <div class="exp-stat-col">
-                                <span class="exp-stat-label">Group Earnings</span>
-                                <span class="exp-stat-val">100%</span>
+                        <div style="display:flex; gap:40px; align-items:center;">
+                            <div style="text-align:left;">
+                                <div style="font-size:10px; color:#65666A; font-weight:800; text-transform:uppercase;">Group Earnings</div>
+                                <div style="font-size:12px; font-weight:700;">100%</div>
                             </div>
-                            <div class="exp-stat-col">
-                                <span class="exp-stat-label">Splits</span>
-                                <span class="exp-stat-val">1</span>
+                            <div style="text-align:left;">
+                                <div style="font-size:10px; color:#65666A; font-weight:800; text-transform:uppercase;">Splits</div>
+                                <div style="font-size:12px; font-weight:700;">1</div>
                             </div>
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                            <svg width="20" height="20" fill="#65666A" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- TRANSACTIONS SECTION -->
+            <section id="transactions" class="section">
+                <h1>Transactions</h1>
+                <div class="tabs-nav">
+                    <div class="tab-link active">Creator Store</div>
+                    <div class="tab-link">Paid Access In Local Currency</div>
+                    <div class="tab-link">Other Transactions <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></div>
+                </div>
+                
+                <div class="info-box-green">
+                    <div class="info-box-left">
+                        <svg class="info-box-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <div>
+                            <div style="font-weight:700; color:white;">Get approval to distribute priced assets</div>
+                            <div style="font-size:12px;">Get approval to set prices for your Creator Store assets</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" style="font-size:11px;">Submit for Review</button>
+                </div>
+
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <span class="filter-label">Payment Type</span>
+                        <div class="custom-select-wrap" style="width:200px;">
+                            <select style="padding:10px;"><option>Outgoing Payments</option></select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Start Date</span>
+                        <div class="filter-input-wrap">
+                            <input type="text" class="filter-input" placeholder="Start Date">
+                            <svg class="filter-icon-right" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">End Date</span>
+                        <div class="filter-input-wrap">
+                            <input type="text" class="filter-input" placeholder="End Date">
+                            <svg class="filter-icon-right" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Price</span>
+                        <div class="custom-select-wrap" style="width:100px;">
+                            <select style="padding:10px;"><option>All</option></select>
+                        </div>
+                    </div>
+                    <div style="margin-bottom:12px; font-size:13px; color:#0084FF; font-weight:600; cursor:pointer;">Reset</div>
+                    <div style="margin-left:auto; margin-bottom:12px;"><svg width="20" height="20" fill="#65666A" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></div>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Source</th>
+                            <th>Description</th>
+                            <th>Transaction Type</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sep 20, 2025</td>
+                            <td><div style="display:flex; align-items:center; gap:8px;"><img src="https://tr.rbxcdn.com/791c5306e987309995152a550d5e899b/150/150/Image/Png" style="width:24px; height:24px; border-radius:4px;"> Kohl</div></td>
+                            <td><div style="display:flex; align-items:center; gap:8px;"><div style="width:24px; height:24px; background:#2C2E33; border-radius:4px; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M13 3h-2v10h2V3zm4 8h-2v10h2V11zm-8 4H7v6h2v-6z"/></svg></div> <div>Kohl's Admin<br><span style="font-size:10px; color:#65666A;">ID: 172732271</span></div></div></td>
+                            <td>Model</td>
+                            <td><div style="display:flex; align-items:center; gap:8px;"><span style="background:#193524; color:#22C55E; padding:2px 6px; border-radius:4px; font-size:10px; font-weight:700;">Paid</span> Free</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <span>Rows per page: 10 <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span>
+                    <span>1-10</span>
+                    <div style="display:flex; gap:16px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg> <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></div>
+                </div>
+            </section>
+
+            <!-- BILLING SECTION -->
+            <section id="billing" class="section">
+                <h1>Billing <span style="font-size:12px; background:#313339; padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:4px;">Beta</span></h1>
+                <div class="tabs-nav">
+                    <div class="tab-link active">Extended Services</div>
+                </div>
+                
+                <div class="card-row">
+                    <div class="card" style="flex:1;">
+                        <div class="card-label">Cost Summary</div>
+                        <div style="display:flex; gap:64px; margin-top:16px;">
+                            <div>
+                                <div class="card-subtext">Pending balance</div>
+                                <div style="font-size:20px; font-weight:700;">$0.00</div>
+                            </div>
+                            <div>
+                                <div class="card-subtext">Month to Date cost</div>
+                                <div style="font-size:20px; font-weight:700;">$0.00 ⓘ</div>
+                            </div>
+                        </div>
+                        <p style="font-size:11px; color:#65666A; margin-top:20px; line-height:1.4;">A bill will be generated on your billing date each month, or when your outstanding balance reaches $10.00. <a href="#" style="color:#0084FF; text-decoration:none;">Learn more.</a></p>
+                    </div>
+                    <div class="card" style="flex:1;">
+                        <div class="card-label">Payment Method</div>
+                        <div class="custom-select-wrap" style="margin-top:12px;">
+                            <select style="background:#0B0D0F;"><option>No payment options available</option></select>
+                        </div>
+                        <p style="font-size:11px; color:#65666A; margin-top:20px; line-height:1.4;">This payment method applies to all experiences on this account. A $1.00 USD temporary authorization hold may be placed on your card.</p>
+                    </div>
+                </div>
+
+                <h2 style="font-size:18px; margin-top:32px; margin-bottom:4px;">Billing history</h2>
+                <p style="font-size:12px; color:#BDC3C7; margin-bottom:24px;">Your billing activity for Extended Services usage across experiences.</p>
+
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <span class="filter-label">Start Month</span>
+                        <div class="filter-input-wrap">
+                            <input type="text" class="filter-input" value="March 2026">
+                            <svg class="filter-icon-right" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">End Month</span>
+                        <div class="filter-input-wrap">
+                            <input type="text" class="filter-input" value="April 2026">
+                            <svg class="filter-icon-right" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="2" style="text-align:left; color:#65666A; padding:24px 12px;">No Data</td></tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <span>10 <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span>
+                    <div style="display:flex; gap:16px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg> <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></div>
                 </div>
             </section>
 
@@ -205,49 +345,11 @@
                     <button class="btn btn-secondary" disabled>Cash Out</button>
                 </div>
                 <p class="description">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox.</p>
-            </section>
-
-            <!-- TRANSACTIONS SECTION -->
-            <section id="transactions" class="section">
-                <h1>Transactions</h1>
-                <div style="border-bottom:1px solid #313339; display:flex; gap:24px; margin-bottom:24px;">
-                    <div style="padding:10px 0; border-bottom:2px solid white; font-weight:700; font-size:13px;">Creator Store</div>
-                </div>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Source</th>
-                            <th>Description</th>
-                            <th>Transaction Type</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sep 20, 2025</td>
-                            <td><div style="display:flex; align-items:center; gap:8px;"><div style="width:20px; height:20px; background:#444; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:10px;">👑</div> Kohl</div></td>
-                            <td><div style="display:flex; align-items:center; gap:8px;"><div style="width:20px; height:20px; background:#444; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:10px;">𝙆</div> <div>Kohl's Admin<br><span style="font-size:10px; color:#65666A;">ID: 172732271</span></div></div></td>
-                            <td>Model</td>
-                            <td><span style="background:#193524; color:#22C55E; padding:2px 6px; border-radius:4px; font-size:10px; font-weight:700; margin-right:8px;">Paid</span> Free</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- BILLING SECTION -->
-            <section id="billing" class="section">
-                <h1>Billing <span style="font-size:12px; background:#313339; padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:4px;">Beta</span></h1>
-                <div class="card-row">
-                    <div class="card" style="flex:1;">
-                        <div class="card-label">Cost Summary</div>
-                        <div style="display:flex; gap:64px; margin-top:16px;">
-                            <div>
-                                <div class="card-subtext">Pending balance</div>
-                                <div style="font-size:20px; font-weight:700;">$1,250.00</div>
-                            </div>
-                        </div>
-                    </div>
+                <div style="margin-top:24px;">
+                    <div class="check-item"><span class="check-icon">✓</span> Minimum of 30,000 earned Robux in your account</div>
+                    <div class="check-item"><span class="check-icon">✓</span> Have a verified email address</div>
+                    <div class="check-item"><span class="check-icon">✓</span> Valid DevEx portal account</div>
+                    <div class="check-item"><span class="check-icon">✓</span> 13 years of age or older</div>
                 </div>
             </section>
 
@@ -287,6 +389,23 @@
             </section>
 
         </main>
+
+        <footer>
+            <div class="footer-links">
+                <span>©2026 Roblox Corporation. All rights reserved.</span>
+                <a href="#" style="color:#65666A; text-decoration:none;">Terms</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Privacy</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Accessibility</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Support</a>
+                <a href="#" style="color:#65666A; text-decoration:none;">Your Privacy Choices <svg width="24" height="12" viewBox="0 0 24 12" fill="none"><path d="M2.5 6H21.5" stroke="#0084FF" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="6" r="4" fill="#0084FF"/><circle cx="6" cy="6" r="4" fill="white"/></svg></a>
+            </div>
+            <div class="footer-right">
+                <div class="social-icons">
+                    <span>𝕏</span> <span>f</span> <span>in</span> <span>📸</span> <span>📺</span>
+                </div>
+                <div class="lang-sel">🌐 English</div>
+            </div>
+        </footer>
     </div>
 
     <!-- Payout Modal -->

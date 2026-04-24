@@ -50,8 +50,8 @@ h1 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
 .card-row { display: flex; gap: 12px; margin-bottom: 20px; }
 .card { background-color: #191B1F; border-radius: 8px; padding: 16px; border: 1px solid transparent; }
 .card-payout { width: 280px; flex: none; }
-.robux-display { display: flex; align-items: center; gap: 6px; font-size: 18px; font-weight: 800; }
-.robux-icon-svg { width: 18px; height: 18px; fill: currentColor; }
+.robux-display { display: flex; align-items: center; gap: 6px; font-size: 18px; font-weight: 800; line-height: 1; }
+.robux-icon-svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; display: inline-block; vertical-align: middle; }
 
 .pill-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
 .pill-tab { padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; color: #BDC3C7; background: #222428; border: none; cursor: pointer; transition: 0.2s; }
@@ -95,7 +95,7 @@ h1 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
 .amount-row { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
 .amount-input-box { width: 150px; position: relative; }
 .amount-label-float { position: absolute; top: -8px; left: 8px; background: #222428; padding: 0 4px; font-size: 10px; color: #BDC3C7; z-index: 1; }
-.amount-input-wrap { background: #111216; border: 1px solid #313339; border-radius: 6px; padding: 10px; display: flex; align-items: center; gap: 6px; }
+.amount-input-wrap { background: #111216; border: 1px solid #313339; border-radius: 6px; padding: 10px; display: flex; align-items: center; gap: 8px; }
 .amount-field { background: transparent; border: none; color: white; font-size: 15px; font-weight: 700; width: 100%; outline: none; }
 
 /* Confirm Step Layout */

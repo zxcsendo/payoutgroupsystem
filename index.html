@@ -1,335 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creator Dashboard - Roblox</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Dashboard - Roblox</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Global Sidebar -->
-    <aside class="global-sidebar">
-        <div class="logo-container"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V20H4V4ZM9 9H15V15H9V9Z" fill="black"/></svg></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span>Creations</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>Learn</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4v2l16 .01V4zm1 5H3l1 9h16l1-9z"/></svg><span>Store</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>Forum</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span>Updates</span></div>
-        <div class="global-nav-item active"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Finances</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg><span>Analytics</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3z"/></svg><span>Collaboration</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg><span>Ads</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4z"/></svg><span>All tools</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>Roblox.com</span></div>
-        <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>Studio</span></div>
-    </aside>
+  <!-- Global Sidebar -->
+  <aside class="global-sidebar">
+    <div class="logo-container"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V20H4V4ZM9 9H15V15H9V9Z" fill="black" />
+      </svg></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </svg><span>Home</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+      </svg><span>Creations</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+      </svg><span>Learn</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20 4H4v2l16 .01V4zm1 5H3l1 9h16l1-9z" />
+      </svg><span>Store</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+      </svg><span>Forum</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+      </svg><span>Updates</span></div>
+    <div class="global-nav-item active"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+      </svg><span>Finances</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+      </svg><span>Analytics</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3z" />
+      </svg><span>Collaboration</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z" />
+      </svg><span>Ads</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4z" />
+      </svg><span>All tools</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+      </svg><span>Roblox.com</span></div>
+    <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+      </svg><span>Studio</span></div>
+  </aside>
 
-    <!-- Context Sidebar -->
-    <aside class="context-sidebar">
-        <div class="sidebar-title">Finances</div>
-        <div class="nav-group">
-            <div class="nav-item" data-section="devex">DevEx</div>
-            <div class="nav-item active" data-section="payouts">Payouts</div>
-            <div class="nav-item" data-section="transactions">Transactions</div>
-        </div>
-        <div class="divider"></div>
-        <div class="nav-group">
-            <div class="nav-item" data-section="billing">Billing</div>
-            <div class="nav-item" data-section="payments">Payments</div>
-            <div class="nav-item" data-section="account-info">Account Information</div>
-        </div>
-    </aside>
-
-    <div class="main-wrapper">
-        <header>
-            <div class="breadcrumb" id="breadcrumb">Payouts</div>
-            <div class="header-right">
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="margin: 0 16px;"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
-                <div class="profile-img"></div>
-            </div>
-        </header>
-
-        <main class="content-area">
-            <!-- PAYOUTS -->
-            <section id="payouts" class="section active">
-                <h1>Payouts</h1>
-                <p class="description">Group payouts enables you to distribute Earned Robux with collaborators who helped you develop content on Roblox.</p>
-                <div class="card-row">
-                    <div class="card card-payout">
-                        <div class="confirm-label">Group Funds</div>
-                        <div class="card-subtext">Robux in your group's account</div>
-                        <div class="robux-display">
-                            <svg class="robux-icon-svg" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg>
-                            <span id="payout-fund-val">...</span>
-                        </div>
-                    </div>
-                    <div class="card card-payout">
-                        <div class="confirm-label">Send a One-Time Payout</div>
-                        <div class="card-subtext">Give Robux to your collaborators</div>
-                        <button class="btn btn-secondary" onclick="openPayoutModal()" style="margin-top:8px;">Send Robux</button>
-                    </div>
-                </div>
-                <div class="pill-tabs"><button class="pill-tab active" onclick="setPayoutTab(this, 'group')">Group</button><button class="pill-tab" onclick="setPayoutTab(this, 'exp')">Experiences</button></div>
-                <div id="payout-group">
-                    <div style="font-weight:800; margin-bottom:12px;">Splits</div>
-                    <div class="group-from-card" style="border-left:4px solid #0084FF;">
-                        <img src="experience_thumb.png" style="width:32px; height:32px; border-radius:4px;">
-                        <div style="flex:1;"><div style="font-weight:700;">Hiraya Community</div><div style="font-size:10px; color:#65666A;">896321250</div></div>
-                        <div style="font-weight:800;">100 %</div>
-                    </div>
-                </div>
-                <div id="payout-exp" style="display:none;">
-                    <div class="group-from-card" style="justify-content:space-between;">
-                        <div style="display:flex; align-items:center; gap:12px;"><img src="experience_thumb.png" style="width:36px; height:36px; border-radius:4px;"><div><div style="font-weight:700;">[SOON] Hiraya Hangout 🌴</div><div style="font-size:10px; color:#65666A;">8480412603</div></div></div>
-                        <div style="display:flex; gap:32px; font-weight:800;"><div style="text-align:left;"><div class="confirm-label">Group Earnings</div><div>100%</div></div><div style="text-align:left;"><div class="confirm-label">Splits</div><div>1</div></div></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DEVEX -->
-            <section id="devex" class="section">
-                <h1>DevEx</h1>
-                <div class="card" style="display:flex; align-items:center; gap:20px; margin-bottom:12px;">
-                    <div style="width:50px; height:50px; border-radius:50%; border:4px solid #2C2E33; display:flex; align-items:center; justify-content:center; font-weight:800;">0%</div>
-                    <div style="flex:1;">
-                        <div style="font-size:12px; color:#BDC3C7; margin-bottom:4px;">Keep it up, earn more to cash out!</div>
-                        <div id="devex-eligible-display" style="font-size:20px; font-weight:800; display:flex; align-items:center; gap:6px;">...</div>
-                        <div style="font-size:10px; color:#65666A; margin-top:4px;">Current rate: <svg class="robux-icon-svg" style="width:12px; height:12px; vertical-align:middle;"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#65666A"/></svg> 10,000 converts to $38.00 USD ⓘ</div>
-                    </div>
-                    <button class="btn btn-secondary" disabled>Cash Out</button>
-                </div>
-                <div style="font-size:11px; color:#65666A; margin-bottom:24px;">* Earned funds can take up to 72 hours to appear in estimated balance eligible for DevEx.</div>
-
-                <p style="font-size:13px; line-height:1.6; color:#BDC3C7; margin-bottom:16px;">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox. Once you earn 30,000 Robux or more, you are eligible to convert your virtual earnings to real-world cash. Your current eligible robux estimate is based on your earnings history and previous Developer Exchange requests. This figure updates daily, but due to processing requirements, this estimate may lag by about three days and requesting this amount is not a guarantee of a completed DevEx request.</p>
-                <p style="font-size:13px; line-height:1.6; color:#BDC3C7; margin-bottom:16px;">You may request to DevEx more than your current eligible estimate if you believe the estimate is less than your total earned Robux. DevEx participants are allowed one completed DevEx request per calendar month.</p>
-                
-                <h3 style="font-size:14px; font-weight:700; margin-bottom:16px;">To use DevEx, you must agree to DevEx Terms of Use and meet the simple requirements set out in those Terms, some of which are as follows:</h3>
-                
-                <div style="color:#BDC3C7; font-size:13px;">
-                    <div style="margin-bottom:12px;">✓ Minimum of 30,000 earned Robux in your account</div>
-                    <div style="margin-bottom:12px;">✓ Have a verified email address</div>
-                    <div style="margin-bottom:12px;">✓ Valid DevEx portal account</div>
-                    <div style="margin-bottom:12px;">✓ 13 years of age or older</div>
-                    <div style="margin-bottom:12px;">✓ Community member in good standing, having complied with Roblox's <a href="#" style="color:#0084FF; text-decoration:none;">Terms of Use</a></div>
-                </div>
-
-                <p style="font-size:13px; line-height:1.6; color:#BDC3C7; margin-top:24px;">If your request is approved, and if this is your first time cashing out, you will receive an email inviting you to create an account on our DevEx portal. You will be prompted to enter your information at account creation. Please make sure your information is entered accurately into the DevEx portal, and is kept up to date at all times. The information you provide is used to ensure all payments comply with laws and regulations. Inaccuracies in information provided could impact your payment.</p>
-                
-                <div style="margin-top:24px; display:flex; flex-direction:column; gap:8px;">
-                    <a href="#" style="color:#0084FF; text-decoration:none; font-size:13px; font-weight:700;">More info about DevEx</a>
-                    <a href="#" style="color:#0084FF; text-decoration:none; font-size:13px; font-weight:700;">DevEx Terms of Use</a>
-                </div>
-            </section>
-
-            <!-- TRANSACTIONS -->
-            <section id="transactions" class="section">
-                <h1>Transactions</h1>
-                <div class="pill-tabs" style="border-bottom:1px solid #313339; margin-bottom:24px; gap:24px; border-radius:0;">
-                    <div style="padding:12px 0; font-weight:700; border-bottom:2px solid white; cursor:pointer;">Creator Store</div>
-                    <div style="padding:12px 0; color:#BDC3C7; cursor:pointer;">Paid Access In Local Currency</div>
-                    <div style="padding:12px 0; color:#BDC3C7; cursor:pointer;">Other Transactions <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></div>
-                </div>
-                <div class="info-box-green" style="background:transparent;">
-                    <div style="display:flex; align-items:center; gap:12px;">
-                        <svg width="20" height="20" fill="#22C55E" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        <div>
-                            <div style="font-weight:700; color:white;">Get approval to distribute priced assets</div>
-                            <div style="font-size:11px; color:#BDC3C7;">Get approval to set prices for your Creator Store assets</div>
-                        </div>
-                    </div>
-                    <button class="btn btn-secondary">Submit for Review</button>
-                </div>
-                <div class="filters-row">
-                    <div class="filter-group"><label class="filter-label">Payment Type</label><div class="filter-input" style="width:200px;">Outgoing Payments ⌵</div></div>
-                    <div class="filter-group"><label class="filter-label">Start Date</label><div class="filter-input" style="width:160px; display:flex; justify-content:space-between;">Start Date <svg width="14" height="14" fill="#65666A" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div></div>
-                    <div class="filter-group"><label class="filter-label">End Date</label><div class="filter-input" style="width:160px; display:flex; justify-content:space-between;">End Date <svg width="14" height="14" fill="#65666A" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div></div>
-                    <div class="filter-group"><label class="filter-label">Price</label><div class="filter-input" style="width:80px;">All ⌵</div></div>
-                    <div style="margin-bottom:10px; color:#0084FF; font-weight:700; cursor:pointer;">Reset</div>
-                    <div style="margin-left:auto; margin-bottom:10px;"><svg width="20" height="20" fill="#65666A" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></div>
-                </div>
-                <table class="data-table">
-                    <thead><tr><th>Date</th><th>Source</th><th>Description</th><th>Transaction Type</th><th>Amount</th></tr></thead>
-                    <tbody>
-                        <tr>
-                            <td>Sep 20, 2025</td>
-                            <td><div style="display:flex; align-items:center; gap:8px;"><img src="experience_thumb.png" style="width:24px; height:24px; border-radius:4px;"> Kohl</div></td>
-                            <td><div style="display:flex; align-items:center; gap:8px;"><svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> <div>Kohl's Admin<br><span style="font-size:10px; color:#65666A;">ID: 172732271</span></div></div></td>
-                            <td>Model</td>
-                            <td><div style="display:flex; align-items:center; gap:8px;"><span style="background:#193524; color:#22C55E; padding:2px 6px; border-radius:4px; font-size:10px; font-weight:700;">Paid</span> Free</div></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div style="display:flex; justify-content:flex-end; align-items:center; gap:16px; margin-top:16px; color:#65666A; font-size:12px;">Rows per page: 10 ⌵ <span>1-10</span> <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg> <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></div>
-            </section>
-
-            <!-- BILLING -->
-            <section id="billing" class="section">
-                <h1>Billing <span style="font-size:10px; background:#313339; padding:2px 6px; border-radius:4px;">Beta</span></h1>
-                <div class="pill-tabs" style="border-bottom:1px solid #313339; margin-bottom:24px; border-radius:0;"><div style="padding:12px 0; font-weight:700; border-bottom:2px solid white; cursor:pointer;">Extended Services</div></div>
-                <div class="card-row">
-                    <div class="card" style="flex:1;">
-                        <div class="confirm-label">Cost Summary</div>
-                        <div style="display:flex; gap:64px; margin-top:16px;">
-                            <div><div class="confirm-label" style="text-transform:none; font-weight:500;">Pending balance</div><div style="font-size:24px; font-weight:800;">$42.50</div></div>
-                            <div><div class="confirm-label" style="text-transform:none; font-weight:500;">Month to Date cost</div><div style="font-size:24px; font-weight:800;">$158.20 ⓘ</div></div>
-                        </div>
-                        <p style="font-size:11px; color:#65666A; margin-top:20px;">A bill will be generated on your billing date each month, or when your outstanding balance reaches $10.00. <a href="#" style="color:#0084FF; text-decoration:none;">Learn more.</a></p>
-                    </div>
-                    <div class="card" style="flex:1;">
-                        <div class="confirm-label">Payment Method</div>
-                        <div style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px; margin-top:12px; color:#BDC3C7; display:flex; justify-content:space-between;">No payment options available ⌵</div>
-                        <p style="font-size:11px; color:#65666A; margin-top:20px;">This payment method applies to all experiences on this account.<br>A $1.00 USD temporary authorization hold may be placed on your card.</p>
-                    </div>
-                </div>
-                <h2 style="font-size:20px; margin-top:32px;">Billing history</h2>
-                <div style="font-size:12px; color:#BDC3C7; margin-bottom:16px;">Your billing activity for Extended Services usage across experiences.</div>
-                <div class="filters-row">
-                    <div class="filter-group"><label class="filter-label">Start Month</label><div class="filter-input" style="width:200px; display:flex; justify-content:space-between;">March 2026 <svg width="14" height="14" fill="#65666A" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div></div>
-                    <div class="filter-group"><label class="filter-label">End Month</label><div class="filter-input" style="width:200px; display:flex; justify-content:space-between;">April 2026 <svg width="14" height="14" fill="#65666A" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div></div>
-                </div>
-                <table class="data-table"><thead><tr><th>Date</th><th>Amount</th></tr></thead><tbody><tr><td colspan="2" style="text-align:center; padding:40px; color:#65666A;">No Data</td></tr></tbody></table>
-            </section>
-
-            <!-- PAYMENTS -->
-            <section id="payments" class="section">
-                <h1>Payments</h1>
-                <h2 style="font-size:18px; margin-top:20px; margin-bottom:12px;">Payment Methods</h2>
-                <div class="card" style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
-                    <div style="background:#0B0D0F; padding:4px 10px; border-radius:4px; font-weight:800; font-size:10px; border:1px solid #313339;">VISA</div>
-                    <div style="flex:1;"><div style="font-weight:700;">Visa ending in 4444</div><div style="font-size:11px; color:#65666A;">Expires 12/2028</div></div>
-                    <div style="color:#65666A;">⌵</div>
-                </div>
-                <button class="btn btn-primary">Add Payment Method</button>
-            </section>
-
-            <!-- ACCOUNT INFO -->
-            <section id="account-info" class="section">
-                <h1>Account Information</h1>
-                <div style="margin-top:24px; max-width:600px;">
-                    <div class="filter-group" style="margin-bottom:24px;"><label class="filter-label">Entity Name *</label><input type="text" class="filter-input" value="Zxcsendo Studios" style="width:100%;"></div>
-                    <div class="filter-group" style="margin-bottom:8px;"><label class="filter-label">Tax ID Type (Optional)</label><div style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:12px; color:#65666A; display:flex; justify-content:space-between;">Select type <span>⌵</span></div></div>
-                    <div style="font-size:11px; color:#65666A;">* Mandatory field</div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-links" style="font-size:11px;">
-                <span>©2026 Roblox Corporation. All rights reserved.</span>
-                <a href="#" style="color:#65666A; text-decoration:none;">Terms</a>
-                <a href="#" style="color:#65666A; text-decoration:none;">Privacy</a>
-                <a href="#" style="color:#65666A; text-decoration:none;">Accessibility</a>
-                <a href="#" style="color:#65666A; text-decoration:none;">Support</a>
-                <a href="#" style="display:flex; align-items:center; gap:6px; color:#0084FF; text-decoration:none;">Your Privacy Choices <svg width="24" height="12" viewBox="0 0 24 12" fill="none"><path d="M2.5 6H21.5" stroke="#0084FF" stroke-width="2"/><circle cx="18" cy="6" r="4" fill="#0084FF"/><circle cx="6" cy="6" r="4" fill="white"/></svg></a>
-            </div>
-            <div style="display:flex; align-items:center; gap:24px;">
-                <div class="social-icons">𝕏 f in 📸 📺</div>
-                <div style="background:#191B1F; padding:4px 12px; border-radius:20px; border:1px solid #313339; display:flex; align-items:center; gap:6px;">🌐 English</div>
-            </div>
-        </footer>
+  <!-- Context Sidebar -->
+  <aside class="context-sidebar">
+    <div class="sidebar-title">Finances</div>
+    <div class="nav-group">
+      <div class="nav-item" data-section="devex">DevEx</div>
+      <div class="nav-item active" data-section="payouts">Payouts</div>
+      <div class="nav-item" data-section="transactions">Transactions</div>
     </div>
-
-    <!-- Modal logic maintained... -->
-    <div id="payout-modal" class="modal-overlay">
-        <div class="modal-box">
-            <div id="step-1" class="modal-step active">
-                <h2 class="modal-title">Send a One-Time Payout</h2>
-                <div class="search-wrap">
-                    <svg class="search-icon-in" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                    <input type="text" id="modal-search-input" class="modal-search-input" placeholder="Search username...">
-                </div>
-                <div id="search-result-container"></div>
-                <div style="display:flex; justify-content:space-between; margin-top:24px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" id="btn-next-1" disabled onclick="toStep(3)">Next</button></div>
-            </div>
-            <div id="step-3" class="modal-step">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;"><h2 class="modal-title" style="margin:0;">Send to Creators</h2><div style="display:flex; align-items:center; gap:6px;"><span style="font-weight:800; font-size:14px;">Total</span><div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg class="robux-icon-svg" style="width:14px; height:14px;" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#BDC3C7"/></svg><span id="total-display-modal">0</span></div></div></div>
-                <div class="amount-row"><div id="recipient-card-step3"></div><div class="amount-input-box"><span class="amount-label-float">Amount</span><div class="amount-input-wrap"><svg class="robux-icon-svg" style="width:14px; height:14px;" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#BDC3C7"/></svg><input type="number" id="modal-amount-input" class="amount-field" value="10000" oninput="updateModalTotal()"></div></div></div>
-                <div style="display:flex; gap:10px; margin-top:32px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" onclick="toStep(1)">Back</button><button class="btn btn-secondary" style="margin-left:auto;" onclick="toStep(4)">Next</button></div>
-            </div>
-            <div id="step-4" class="modal-step">
-                <h2 class="modal-title">Confirm Payout</h2>
-                <div class="confirm-section"><div class="confirm-label">From</div><div class="group-from-card"><div style="width:36px; height:36px; background:white; border-radius:6px; display:flex; align-items:center; justify-content:center; color:orange;">★</div><div><div style="font-weight:800;">StarCode Studio</div><div style="font-size:10px; color:#65666A;">896321250</div></div></div></div>
-                <div class="confirm-section"><div class="confirm-label">To</div><div style="display:flex; justify-content:space-between; align-items:center;"><div id="recipient-card-step4"></div><div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg class="robux-icon-svg" style="width:14px; height:14px;" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg><span class="final-val">10,000</span></div></div></div>
-                <div style="border-top:1px solid #313339; padding-top:12px; display:flex; justify-content:space-between; align-items:center; margin-bottom:32px;"><span style="font-size:16px; font-weight:800;">Total</span><div style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:800;"><svg class="robux-icon-svg" style="width:16px; height:16px;" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg><span class="final-val">10,000</span></div></div>
-                <div style="display:flex; gap:10px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" onclick="toStep(3)">Back</button><button class="btn btn-white" style="margin-left:auto; padding:10px 30px;" onclick="executePayout()">Confirm</button></div>
-            </div>
-            <div id="step-5" class="modal-step" style="text-align:center;"><div class="success-check">✓</div><h2 style="font-weight:800; margin-bottom:4px;">Payout Sent!</h2><p style="font-size:12px; color:#BDC3C7; margin-bottom:32px;"><span class="final-val">10,000</span> Robux sent to <span id="success-target">rzsenhsha</span>.</p><button class="btn btn-white" style="padding:10px 60px;" onclick="closePayoutModal()">Done</button></div>
-        </div>
+    <div class="divider"></div>
+    <div class="nav-group">
+      <div class="nav-item" data-section="billing">Billing</div>
+      <div class="nav-item" data-section="payments">Payments</div>
+      <div class="nav-item" data-section="account-info">Account Information</div>
     </div>
+  </aside>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const minFunds = 30000000; const maxFunds = 70000000;
-            let currentFunds = Math.floor(Math.random() * (maxFunds - minFunds + 1)) + minFunds;
-            function updateDisplays() { 
-                document.getElementById('payout-fund-val').textContent = currentFunds.toLocaleString(); 
-                const devex = document.getElementById('devex-eligible-display');
-                if(devex) devex.innerHTML = `<svg class="robux-icon-svg" style="width:16px; height:16px; vertical-align:middle;"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg> ${Math.floor(currentFunds * 0.15).toLocaleString()} eligible *`;
-            }
-            updateDisplays();
+  <div class="main-wrapper">
+    <header>
+      <div class="breadcrumb" id="breadcrumb">Payouts</div>
+      <div class="header-right">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+        </svg>
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="margin: 0 16px;">
+          <path
+            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+        </svg>
+        <div class="profile-img"></div>
+      </div>
+    </header>
 
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-                    document.getElementById(item.getAttribute('data-section')).classList.add('active');
-                    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-                    item.classList.add('active');
-                    document.getElementById('breadcrumb').textContent = item.textContent;
-                });
-            });
+    <main class="content-area">
+      <!-- PAYOUTS -->
+      <section id="payouts" class="section active">
+        <h1>Payouts</h1>
+        <p class="description">Group payouts enables you to distribute Earned Robux with collaborators who helped you
+          develop content on Roblox.</p>
+        <div class="card-row">
+          <div class="card card-payout">
+            <div class="confirm-label">Group Funds</div>
+            <div class="card-subtext">Robux in your group's account</div>
+            <div class="robux-display">
+              <svg class="robux-icon-svg" viewBox="0 0 16 16">
+                <path
+                  d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z"
+                  fill="white" />
+              </svg>
+              <span id="payout-fund-val">...</span>
+            </div>
+          </div>
+          <div class="card card-payout">
+            <div class="confirm-label">Send a One-Time Payout</div>
+            <div class="card-subtext">Give Robux to your collaborators</div>
+            <button class="btn btn-secondary" onclick="openPayoutModal()" style="margin-top:8px;">Send Robux</button>
+          </div>
+        </div>
+        <div class="pill-tabs"><button class="pill-tab active"
+            onclick="setPayoutTab(this, 'group')">Group</button><button class="pill-tab"
+            onclick="setPayoutTab(this, 'exp')">Experiences</button></div>
+        <div id="payout-group">
+          <div style="font-weight:800; margin-bottom:12px;">Splits</div>
+          <div class="group-from-card" style="border-left:4px solid #0084FF;">
+            <img src="experience_thumb.png" style="width:32px; height:32px; border-radius:4px;">
+            <div style="flex:1;">
+              <div style="font-weight:700;">Hiraya Community</div>
+              <div style="font-size:10px; color:#65666A;">896321250</div>
+            </div>
+            <div style="font-weight:800;">100 %</div>
+          </div>
+        </div>
+        <div id="payout-exp" style="display:none;">
+          <div class="group-from-card" style="justify-content:space-between;">
+            <div style="display:flex; align-items:center; gap:12px;"><img src="experience_thumb.png"
+                style="width:36px; height:36px; border-radius:4px;">
+              <div>
+                <div style="font-weight:700;">[SOON] Hiraya Hangout 🌴</div>
+                <div style="font-size:10px; color:#65666A;">8480412603</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:32px; font-weight:800;">
+              <div style="text-align:left;">
+                <div class="confirm-label">Group Earnings</div>
+                <div>100%</div>
+              </div>
+              <div style="text-align:left;">
+                <div class="confirm-label">Splits</div>
+                <div>1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            let selectedUser = null;
-            document.getElementById('modal-search-input').addEventListener('input', async (e) => {
-                const query = e.target.value.trim();
-                if (query.length > 2) {
-                    try {
-                        const proxy = "https://corsproxy.io/?";
-                        const res = await fetch(`${proxy}https://users.roblox.com/v1/usernames/users`, {
-                            method: 'POST', headers: {'Content-Type': 'application/json'},
-                            body: JSON.stringify({ usernames: [query], excludeBannedUsers: true })
-                        });
-                        const data = await res.json();
-                        if (data.data && data.data.length > 0) {
-                            const u = data.data[0];
-                            const tRes = await fetch(`${proxy}https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${u.id}&size=48x48&format=Png&isCircular=false`);
-                            const tData = await tRes.json();
-                            selectedUser = { id: u.id, name: u.displayName, username: u.name, avatar: tData.data[0].imageUrl };
-                            renderSearch(selectedUser);
-                        } else if (query.toLowerCase() === "rzsenhsha") {
-                            selectedUser = { id: 123, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
-                            renderSearch(selectedUser);
-                        }
-                    } catch {
-                        if (query.toLowerCase() === "rzsenhsha") {
-                            selectedUser = { id: 123, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
-                            renderSearch(selectedUser);
-                        }
-                    }
-                }
-            });
+      <!-- DEVEX -->
+      <section id="devex" class="section">
+        <h1>DevEx</h1>
+        <div class="card" style="display:flex; align-items:center; gap:20px; margin-bottom:12px;">
+          <div
+            style="width:50px; height:50px; border-radius:50%; border:4px solid #2C2E33; display:flex; align-items:center; justify-content:center; font-weight:800;">
+            0%</div>
+          <div style="flex:1;">
+            <div style="font-size:12px; color:#BDC3C7; margin-bottom:4px;">Keep it up, earn more to cash out!</div>
+            <div id="devex-eligible-display"
+              style="font-size:20px; font-weight:800; display:flex; align-items:center; gap:6px;">...</div>
+            <div style="font-size:10px; color:#65666A; margin-top:4px;">Current rate: <svg class="robux-icon-svg"
+                style="width:12px; height:12px; vertical-align:middle;">
+                <path
+                  d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z"
+                  fill="#65666A" />
+              </svg> 10,000 converts to $38.00 USD ⓘ</div>
+          </div>
+          <button class="btn btn-secondary" disabled>Cash Out</button>
+        </div>
+        <div style="font-size:11px; color:#65666A; margin-bottom:24px;">* Earned funds can take up to 72 hours to appear
+          in estimated balance eligible for DevEx.</div>
 
-            function renderSearch(u) {
-                document.getElementById('search-result-container').innerHTML = `<div class="user-search-result"><div class="avatar-box"><img src="${u.avatar}" style="width:100%; height:100%;"></div><div style="flex:1;"><div style="font-weight:800;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div><div style="cursor:pointer;" onclick="clearSearch()">✕</div></div>`;
-                const btn = document.getElementById('btn-next-1'); btn.disabled = false; btn.classList.replace('btn-secondary', 'btn-primary');
-            }
+        <p style="font-size:13px; line-height:1.6; color:#BDC3C7; margin-bottom:16px;">The Developer Exchange Program
+          (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox. Once you earn 30,000
+          Robux or more, you are eligible to convert your virtual earnings to real-world cash. Your current eligible
+          robux estimate is based on your earnings history and previous Developer Exchange requests. This figure updates
+          daily, but due to processing requirements, this estimate may lag by about three days and requesting this
+          amount is not a guarantee of a completed DevEx request.</p>
+        <p style="font-size:13px; line-height:1.6; color:#BDC3C7; margin-bottom:16px;">You may request to DevEx more
+          than your current eligible estimate if you believe the estimate is less than your total earned Robux. DevEx
+          participants are allowed one completed DevEx request per calendar month.</p>
 
-            window.clearSearch = () => { document.getElementById('modal-search-input').value = ''; document.getElementById('search-result-container').innerHTML = ''; const btn = document.getElementById('btn-next-1'); btn.disabled = true; btn.classList.replace('btn-primary', 'btn-secondary'); };
-            window.openPayoutModal = () => { document.getElementById('payout-modal').style.display = 'flex'; toStep(1); clearSearch(); };
-            window.closePayoutModal = () => { document.getElementById('payout-modal').style.display = 'none'; };
-            window.toStep = (n) => {
-                document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
-                document.getElementById('step-' + n).classList.add('active');
-                if(n === 3) { document.getElementById('recipient-card-step3').innerHTML = miniCard(selectedUser); updateModalTotal(); }
-                if(n === 4) { document.getElementById('recipient-card-step4').innerHTML = miniCard(selectedUser); const amt = document.getElementById('modal-amount-input').value; document.querySelectorAll('.final-val').forEach(v => v.textContent = parseInt(amt).toLocaleString()); }
-                if(n === 5) { document.getElementById('success-target').textContent = selectedUser.name; }
-            };
-            window.executePayout = () => { currentFunds -= parseInt(document.getElementById('modal-amount-input').value); updateDisplays(); toStep(5); };
-            window.updateModalTotal = () => { document.getElementById('total-display-modal').textContent = parseInt(document.getElementById('modal-amount-input').value || 0).toLocaleString(); };
-            window.setPayoutTab = (btn, id) => { document.querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); document.getElementById('payout-group').style.display = id === 'group' ? 'block' : 'none'; document.getElementById('payout-exp').style.display = id === 'exp' ? 'block' : 'none'; };
-            function miniCard(u) { return `<div style="display:flex; align-items:center; gap:10px;"><div class="avatar-box" style="width:32px; height:32px;"><img src="${u.avatar}" style="width:100%; height:100%;"></div><div><div style="font-weight:800; font-size:12px;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div></div>`; }
+        <h3 style="font-size:14px; font-weight:700; margin-bottom:16px;">To use DevEx, you must agree to DevEx Terms of
+          Use and meet the simple requirements set out in those Terms, some of which are as follows:</h3>
+
+        <div style="color:#BDC3C7; font-size:13px;">
+          <div style="margin-bottom:12px;">✓ Minimum of 30,000 earned Robux in your account</div>
+          <div style="margin-bottom:12px;">✓ Have a verified email address</div>
+          <div style="margin-bottom:12px;">✓ Valid DevEx portal account</div>
+          <div style="margin-bottom:12px;">✓ 13 years of age or older</div>
+          <div style="margin-bottom:12px;">✓ Community member in good standing, having complied with Roblox's <a
+              href="#" style="color:#0084FF; text-decoration:none;">Terms of Use</a></div>
+        </div>
+
+        <p style="font-size:13px; line-height:1.6; color:#BDC3C7; margin-top:24px;">If your request is approved, and if
+          this is your first time cashing out, you will receive an email inviting you to create an account on our DevEx
+          portal. You will be prompted to enter your information at account creation. Please make sure your information
+          is entered accurately into the DevEx portal, and is kept up to date at all times. The information you provide
+          is used to ensure all payments comply with laws and regulations. Inaccuracies in information provided could
+          impact your payment.</p>
+
+        <div style="margin-top:24px; display:flex; flex-direction:column; gap:8px;">
+          <a href="#" style="color:#0084FF; text-decoration:none; font-size:13px; font-weight:700;">More info about
+            DevEx</a>
+          <a href="#" style="color:#0084FF; text-decoration:none; font-size:13px; font-weight:700;">DevEx Terms of
+            Use</a>
+        </div>
+      </section>
+
+      <!-- TRANSACTIONS -->
+      <section id="transactions" class="section">
+        <h1>Transactions</h1>
+        <div class="pill-tabs" style="border-bottom:1px solid #313339; margin-bottom:24px; gap:24px; border-radius:0;">
+          <div style="padding:12px 0; font-weight:700; border-bottom:2px solid white; cursor:pointer;">Creator Store
+          </div>
+          <div style="padding:12px 0; color:#BDC3C7; cursor:pointer;">Paid Access In Local Currency</div>
+          <div style="padding:12px 0; color:#BDC3C7; cursor:pointer;">Other Transactions <svg width="12" height="12"
+              fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;">
+              <path
+                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+            </svg></div>
+        </div>
+        <div class="info-box-green" style="background:transparent;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <svg width="20" height="20" fill="#22C55E" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+            <div>
+              <div style="font-weight:700; color:white;">Get approval to distribute priced assets</div>
+              <div style="font-size:11px; color:#BDC3C7;">Get approval to set prices for your Creator Store assets</div>
+            </div>
+          </div>
+          <button class="btn btn-secondary">Submit for Review</button>
+        </div>
+        <div class="filters-row">
+          <div class="filter-group"><label class="filter-label">Payment Type</label>
+            <div class="filter-input" style="width:200px;">Outgoing Payments ⌵</div>
+          </div>
+          <div class="filter-group"><label class="filter-label">Start Date</label>
+            <div class="filter-input" style="width:160px; display:flex; justify-content:space-between;">Start Date <svg
+                width="14" height="14" fill="#65666A" viewBox="0 0 24 24">
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+              </svg></div>
+          </div>
+          <div class="filter-group"><label class="filter-label">End Date</label>
+            <div class="filter-input" style="width:160px; display:flex; justify-content:space-between;">End Date <svg
+                width="14" height="14" fill="#65666A" viewBox="0 0 24 24">
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+              </svg></div>
+          </div>
+          <div class="filter-group"><label class="filter-label">Price</label>
+            <div class="filter-input" style="width:80px;">All ⌵</div>
+          </div>
+          <div style="margin-bottom:10px; color:#0084FF; font-weight:700; cursor:pointer;">Reset</div>
+          <div style="margin-left:auto; margin-bottom:10px;"><svg width="20" height="20" fill="#65666A"
+              viewBox="0 0 24 24">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+            </svg></div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Source</th>
+              <th>Description</th>
+              <th>Transaction Type</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sep 20, 2025</td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;"><img src="experience_thumb.png"
+                    style="width:24px; height:24px; border-radius:4px;"> Kohl</div>
+              </td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;"><svg width="20" height="20" fill="white"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
+                  <div>Kohl's Admin<br><span style="font-size:10px; color:#65666A;">ID: 172732271</span></div>
+                </div>
+              </td>
+              <td>Model</td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;"><span
+                    style="background:#193524; color:#22C55E; padding:2px 6px; border-radius:4px; font-size:10px; font-weight:700;">Paid</span>
+                  Free</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          style="display:flex; justify-content:flex-end; align-items:center; gap:16px; margin-top:16px; color:#65666A; font-size:12px;">
+          Rows per page: 10 ⌵ <span>1-10</span> <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg> <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg></div>
+      </section>
+
+      <!-- BILLING -->
+      <section id="billing" class="section">
+        <h1>Billing <span style="font-size:10px; background:#313339; padding:2px 6px; border-radius:4px;">Beta</span>
+        </h1>
+        <div class="pill-tabs" style="border-bottom:1px solid #313339; margin-bottom:24px; border-radius:0;">
+          <div style="padding:12px 0; font-weight:700; border-bottom:2px solid white; cursor:pointer;">Extended Services
+          </div>
+        </div>
+        <div class="card-row">
+          <div class="card" style="flex:1;">
+            <div class="confirm-label">Cost Summary</div>
+            <div style="display:flex; gap:64px; margin-top:16px;">
+              <div>
+                <div class="confirm-label" style="text-transform:none; font-weight:500;">Pending balance</div>
+                <div style="font-size:24px; font-weight:800;">$42.50</div>
+              </div>
+              <div>
+                <div class="confirm-label" style="text-transform:none; font-weight:500;">Month to Date cost</div>
+                <div style="font-size:24px; font-weight:800;">$158.20 ⓘ</div>
+              </div>
+            </div>
+            <p style="font-size:11px; color:#65666A; margin-top:20px;">A bill will be generated on your billing date
+              each month, or when your outstanding balance reaches $10.00. <a href="#"
+                style="color:#0084FF; text-decoration:none;">Learn more.</a></p>
+          </div>
+          <div class="card" style="flex:1;">
+            <div class="confirm-label">Payment Method</div>
+            <div
+              style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px; margin-top:12px; color:#BDC3C7; display:flex; justify-content:space-between;">
+              No payment options available ⌵</div>
+            <p style="font-size:11px; color:#65666A; margin-top:20px;">This payment method applies to all experiences on
+              this account.<br>A $1.00 USD temporary authorization hold may be placed on your card.</p>
+          </div>
+        </div>
+        <h2 style="font-size:20px; margin-top:32px;">Billing history</h2>
+        <div style="font-size:12px; color:#BDC3C7; margin-bottom:16px;">Your billing activity for Extended Services
+          usage across experiences.</div>
+        <div class="filters-row">
+          <div class="filter-group"><label class="filter-label">Start Month</label>
+            <div class="filter-input" style="width:200px; display:flex; justify-content:space-between;">March 2026 <svg
+                width="14" height="14" fill="#65666A" viewBox="0 0 24 24">
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+              </svg></div>
+          </div>
+          <div class="filter-group"><label class="filter-label">End Month</label>
+            <div class="filter-input" style="width:200px; display:flex; justify-content:space-between;">April 2026 <svg
+                width="14" height="14" fill="#65666A" viewBox="0 0 24 24">
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+              </svg></div>
+          </div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2" style="text-align:center; padding:40px; color:#65666A;">No Data</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- PAYMENTS -->
+      <section id="payments" class="section">
+        <h1>Payments</h1>
+        <h2 style="font-size:18px; margin-top:20px; margin-bottom:12px;">Payment Methods</h2>
+        <div class="card" style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+          <div
+            style="background:#0B0D0F; padding:4px 10px; border-radius:4px; font-weight:800; font-size:10px; border:1px solid #313339;">
+            VISA</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;">Visa ending in 4444</div>
+            <div style="font-size:11px; color:#65666A;">Expires 12/2028</div>
+          </div>
+          <div style="color:#65666A;">⌵</div>
+        </div>
+        <button class="btn btn-primary">Add Payment Method</button>
+      </section>
+
+      <!-- ACCOUNT INFO -->
+      <section id="account-info" class="section">
+        <h1>Account Information</h1>
+        <div style="margin-top:24px; max-width:600px;">
+          <div class="filter-group" style="margin-bottom:24px;"><label class="filter-label">Entity Name *</label><input
+              type="text" class="filter-input" value="Zxcsendo Studios" style="width:100%;"></div>
+          <div class="filter-group" style="margin-bottom:8px;"><label class="filter-label">Tax ID Type
+              (Optional)</label>
+            <div
+              style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:12px; color:#65666A; display:flex; justify-content:space-between;">
+              Select type <span>⌵</span></div>
+          </div>
+          <div style="font-size:11px; color:#65666A;">* Mandatory field</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links" style="font-size:11px;">
+        <span>©2026 Roblox Corporation. All rights reserved.</span>
+        <a href="#" style="color:#65666A; text-decoration:none;">Terms</a>
+        <a href="#" style="color:#65666A; text-decoration:none;">Privacy</a>
+        <a href="#" style="color:#65666A; text-decoration:none;">Accessibility</a>
+        <a href="#" style="color:#65666A; text-decoration:none;">Support</a>
+        <a href="#" style="display:flex; align-items:center; gap:6px; color:#0084FF; text-decoration:none;">Your Privacy
+          Choices <svg width="24" height="12" viewBox="0 0 24 12" fill="none">
+            <path d="M2.5 6H21.5" stroke="#0084FF" stroke-width="2" />
+            <circle cx="18" cy="6" r="4" fill="#0084FF" />
+            <circle cx="6" cy="6" r="4" fill="white" />
+          </svg></a>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px;">
+        <div class="social-icons">𝕏 f in 📸 📺</div>
+        <div
+          style="background:#191B1F; padding:4px 12px; border-radius:20px; border:1px solid #313339; display:flex; align-items:center; gap:6px;">
+          🌐 English</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal logic maintained... -->
+  <div id="payout-modal" class="modal-overlay">
+    <div class="modal-box">
+      <div id="step-1" class="modal-step active">
+        <h2 class="modal-title">Send a One-Time Payout</h2>
+        <div class="search-wrap">
+          <svg class="search-icon-in" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+          </svg>
+          <input type="text" id="modal-search-input" class="modal-search-input" placeholder="Search username...">
+        </div>
+        <div id="search-result-container"></div>
+        <div style="display:flex; justify-content:space-between; margin-top:24px;"><button class="btn btn-secondary"
+            onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" id="btn-next-1" disabled
+            onclick="toStep(3)">Next</button></div>
+      </div>
+      <div id="step-3" class="modal-step">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+          <h2 class="modal-title" style="margin:0;">Send to Creators</h2>
+          <div style="display:flex; align-items:center; gap:6px;"><span
+              style="font-weight:800; font-size:14px;">Total</span>
+            <div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg class="robux-icon-svg"
+                style="width:14px; height:14px;" viewBox="0 0 16 16">
+                <path
+                  d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z"
+                  fill="#BDC3C7" />
+              </svg><span id="total-display-modal">0</span></div>
+          </div>
+        </div>
+        <div class="amount-row">
+          <div id="recipient-card-step3"></div>
+          <div class="amount-input-box"><span class="amount-label-float">Amount</span>
+            <div class="amount-input-wrap"><svg class="robux-icon-svg" style="width:14px; height:14px;"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z"
+                  fill="#BDC3C7" />
+              </svg><input type="number" id="modal-amount-input" class="amount-field" value="10000"
+                oninput="updateModalTotal()"></div>
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:32px;"><button class="btn btn-secondary"
+            onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary"
+            onclick="toStep(1)">Back</button><button class="btn btn-secondary" style="margin-left:auto;"
+            onclick="toStep(4)">Next</button></div>
+      </div>
+      <div id="step-4" class="modal-step">
+        <h2 class="modal-title">Confirm Payout</h2>
+        <div class="confirm-section">
+          <div class="confirm-label">From</div>
+          <div class="group-from-card">
+            <div
+              style="width:36px; height:36px; background:white; border-radius:6px; display:flex; align-items:center; justify-content:center; color:orange;">
+              ★</div>
+            <div>
+              <div style="font-weight:800;">StarCode Studio</div>
+              <div style="font-size:10px; color:#65666A;">896321250</div>
+            </div>
+          </div>
+        </div>
+        <div class="confirm-section">
+          <div class="confirm-label">To</div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div id="recipient-card-step4"></div>
+            <div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg class="robux-icon-svg"
+                style="width:14px; height:14px;" viewBox="0 0 16 16">
+                <path
+                  d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z"
+                  fill="white" />
+              </svg><span class="final-val">10,000</span></div>
+          </div>
+        </div>
+        <div
+          style="border-top:1px solid #313339; padding-top:12px; display:flex; justify-content:space-between; align-items:center; margin-bottom:32px;">
+          <span style="font-size:16px; font-weight:800;">Total</span>
+          <div style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:800;"><svg
+              class="robux-icon-svg" style="width:16px; height:16px;" viewBox="0 0 16 16">
+              <path
+                d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z"
+                fill="white" />
+            </svg><span class="final-val">10,000</span></div>
+        </div>
+        <div style="display:flex; gap:10px;"><button class="btn btn-secondary"
+            onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary"
+            onclick="toStep(3)">Back</button><button class="btn btn-white" style="margin-left:auto; padding:10px 30px;"
+            onclick="executePayout()">Confirm</button></div>
+      </div>
+      <div id="step-5" class="modal-step" style="text-align:center;">
+        <div class="success-check">✓</div>
+        <h2 style="font-weight:800; margin-bottom:4px;">Payout Sent!</h2>
+        <p style="font-size:12px; color:#BDC3C7; margin-bottom:32px;"><span class="final-val">10,000</span> Robux sent
+          to <span id="success-target">rzsenhsha</span>.</p><button class="btn btn-white" style="padding:10px 60px;"
+          onclick="closePayoutModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const minFunds = 30000000; const maxFunds = 70000000;
+      let currentFunds = Math.floor(Math.random() * (maxFunds - minFunds + 1)) + minFunds;
+      function updateDisplays() {
+        document.getElementById('payout-fund-val').textContent = currentFunds.toLocaleString();
+        const devex = document.getElementById('devex-eligible-display');
+        if (devex) devex.innerHTML = `<svg class="robux-icon-svg" style="width:16px; height:16px; vertical-align:middle;"><path d="M8.28 1.48L13.82 4.67V11.06L8.28 14.25L2.73 11.06V4.67L8.28 1.48ZM8.28 3.51L5.05 5.37V10.36L8.28 12.22L11.51 10.36V5.37L8.28 3.51ZM8.28 5.76L9.89 6.69V8.94L8.28 9.87L6.67 8.94V6.69L8.28 5.76Z" fill="white"/></svg> ${Math.floor(currentFunds * 0.15).toLocaleString()} eligible *`;
+      }
+      updateDisplays();
+
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+          document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+          document.getElementById(item.getAttribute('data-section')).classList.add('active');
+          document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+          item.classList.add('active');
+          document.getElementById('breadcrumb').textContent = item.textContent;
         });
-    </script>
+      });
+
+      let selectedUser = null;
+      document.getElementById('modal-search-input').addEventListener('input', async (e) => {
+        const query = e.target.value.trim();
+        if (query.length > 2) {
+          try {
+            const proxy = "https://corsproxy.io/?";
+            const res = await fetch(`${proxy}https://users.roblox.com/v1/usernames/users`, {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ usernames: [query], excludeBannedUsers: true })
+            });
+            const data = await res.json();
+            if (data.data && data.data.length > 0) {
+              const u = data.data[0];
+              const tRes = await fetch(`${proxy}https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${u.id}&size=48x48&format=Png&isCircular=false`);
+              const tData = await tRes.json();
+              selectedUser = { id: u.id, name: u.displayName, username: u.name, avatar: tData.data[0].imageUrl };
+              renderSearch(selectedUser);
+            } else if (query.toLowerCase() === "rzsenhsha") {
+              selectedUser = { id: 123, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
+              renderSearch(selectedUser);
+            }
+          } catch {
+            if (query.toLowerCase() === "rzsenhsha") {
+              selectedUser = { id: 123, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
+              renderSearch(selectedUser);
+            }
+          }
+        }
+      });
+
+      function renderSearch(u) {
+        document.getElementById('search-result-container').innerHTML = `<div class="user-search-result"><div class="avatar-box"><img src="${u.avatar}" style="width:100%; height:100%;"></div><div style="flex:1;"><div style="font-weight:800;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div><div style="cursor:pointer;" onclick="clearSearch()">✕</div></div>`;
+        const btn = document.getElementById('btn-next-1'); btn.disabled = false; btn.classList.replace('btn-secondary', 'btn-primary');
+      }
+
+      window.clearSearch = () => { document.getElementById('modal-search-input').value = ''; document.getElementById('search-result-container').innerHTML = ''; const btn = document.getElementById('btn-next-1'); btn.disabled = true; btn.classList.replace('btn-primary', 'btn-secondary'); };
+      window.openPayoutModal = () => { document.getElementById('payout-modal').style.display = 'flex'; toStep(1); clearSearch(); };
+      window.closePayoutModal = () => { document.getElementById('payout-modal').style.display = 'none'; };
+      window.toStep = (n) => {
+        document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step-' + n).classList.add('active');
+        if (n === 3) { document.getElementById('recipient-card-step3').innerHTML = miniCard(selectedUser); updateModalTotal(); }
+        if (n === 4) { document.getElementById('recipient-card-step4').innerHTML = miniCard(selectedUser); const amt = document.getElementById('modal-amount-input').value; document.querySelectorAll('.final-val').forEach(v => v.textContent = parseInt(amt).toLocaleString()); }
+        if (n === 5) { document.getElementById('success-target').textContent = selectedUser.name; }
+      };
+      window.executePayout = () => { currentFunds -= parseInt(document.getElementById('modal-amount-input').value); updateDisplays(); toStep(5); };
+      window.updateModalTotal = () => { document.getElementById('total-display-modal').textContent = parseInt(document.getElementById('modal-amount-input').value || 0).toLocaleString(); };
+      window.setPayoutTab = (btn, id) => { document.querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); document.getElementById('payout-group').style.display = id === 'group' ? 'block' : 'none'; document.getElementById('payout-exp').style.display = id === 'exp' ? 'block' : 'none'; };
+      function miniCard(u) { return `<div style="display:flex; align-items:center; gap:10px;"><div class="avatar-box" style="width:32px; height:32px;"><img src="${u.avatar}" style="width:100%; height:100%;"></div><div><div style="font-weight:800; font-size:12px;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div></div>`; }
+    });
+  </script>
 </body>
+
 </html>

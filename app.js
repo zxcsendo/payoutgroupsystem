@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle global sidebar active state (visual only for now)
+    // Handle global sidebar active state (visual only)
     const globalItems = document.querySelectorAll('.global-nav-item');
     globalItems.forEach(item => {
         item.addEventListener('click', () => {

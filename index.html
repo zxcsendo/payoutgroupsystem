@@ -117,7 +117,7 @@
                     <div class="card card-payout">
                         <div class="card-label">Send a One-Time Payout</div>
                         <div class="card-subtext">Give Robux to your collaborators</div>
-                        <button class="btn btn-secondary" disabled>Send Robux</button>
+                        <button class="btn btn-secondary" onclick="openPayoutModal()">Send Robux</button>
                     </div>
                 </div>
 
@@ -136,7 +136,7 @@
                             <div class="splits-box">
                                 <div class="split-item">
                                     <div class="split-thumb">
-                                        <img src="https://tr.rbxcdn.com/791c5306e987309995152a550d5e899b/150/150/Image/Png" alt="Hiraya Logo">
+                                        <img src="experience_thumb.png" alt="Hiraya Logo">
                                     </div>
                                     <div class="split-info">
                                         <div class="split-name">Hiraya Community</div>
@@ -204,25 +204,40 @@
                     </div>
                     <button class="btn btn-secondary" disabled>Cash Out</button>
                 </div>
-                <p class="description" style="color:white; margin-bottom:12px;">* Earned funds can take up to 72 hours to appear in estimated balance eligible for DevEx.</p>
-                <p class="description">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox. Once you earn 30,000 Robux or more, you are eligible to convert your virtual earnings to real-world cash. Your current eligible robux estimate is based on your earnings history and previous Developer Exchange requests. This figure updates daily, but due to processing requirements, this estimate may lag by about three days and requesting this amount is not a guarantee of a completed DevEx request.</p>
-                
-                <div style="margin-top:24px;">
-                    <p style="font-size:13px; font-weight:600; margin-bottom:16px;">To use DevEx, you must agree to DevEx Terms of Use and meet the simple requirements set out in those Terms, some of which are as follows:</p>
-                    <div class="check-item"><span class="check-icon">✓</span> Minimum of 30,000 earned Robux in your account</div>
-                    <div class="check-item"><span class="check-icon">✓</span> Have a verified email address</div>
-                    <div class="check-item"><span class="check-icon">✓</span> Valid DevEx portal account</div>
-                    <div class="check-item"><span class="check-icon">✓</span> 13 years of age or older</div>
-                    <div class="check-item"><span class="check-icon">✓</span> Community member in good standing, having complied with Roblox's <a href="#" style="color:#0084FF; text-decoration:none;">Terms of Use</a></div>
+                <p class="description">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox.</p>
+            </section>
+
+            <!-- TRANSACTIONS SECTION -->
+            <section id="transactions" class="section">
+                <h1>Transactions</h1>
+                <div style="border-bottom:1px solid #313339; display:flex; gap:24px; margin-bottom:24px;">
+                    <div style="padding:10px 0; border-bottom:2px solid white; font-weight:700; font-size:13px;">Creator Store</div>
                 </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Source</th>
+                            <th>Description</th>
+                            <th>Transaction Type</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sep 20, 2025</td>
+                            <td><div style="display:flex; align-items:center; gap:8px;"><div style="width:20px; height:20px; background:#444; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:10px;">👑</div> Kohl</div></td>
+                            <td><div style="display:flex; align-items:center; gap:8px;"><div style="width:20px; height:20px; background:#444; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:10px;">𝙆</div> <div>Kohl's Admin<br><span style="font-size:10px; color:#65666A;">ID: 172732271</span></div></div></td>
+                            <td>Model</td>
+                            <td><span style="background:#193524; color:#22C55E; padding:2px 6px; border-radius:4px; font-size:10px; font-weight:700; margin-right:8px;">Paid</span> Free</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <!-- BILLING SECTION -->
             <section id="billing" class="section">
                 <h1>Billing <span style="font-size:12px; background:#313339; padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:4px;">Beta</span></h1>
-                <div style="border-bottom:1px solid #313339; margin-bottom:24px;">
-                    <div style="padding:10px 0; border-bottom:2px solid white; font-weight:700; font-size:13px; display:inline-block;">Extended Services</div>
-                </div>
                 <div class="card-row">
                     <div class="card" style="flex:1;">
                         <div class="card-label">Cost Summary</div>
@@ -231,28 +246,30 @@
                                 <div class="card-subtext">Pending balance</div>
                                 <div style="font-size:20px; font-weight:700;">$1,250.00</div>
                             </div>
-                            <div>
-                                <div class="card-subtext">Month to Date cost</div>
-                                <div style="font-size:20px; font-weight:700;">$482.15 ⓘ</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="flex:1;">
-                        <div class="card-label">Payment Method</div>
-                        <div style="background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:10px 12px; display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
-                            <span style="font-size:13px;">No payment options available</span>
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- PAYMENTS SECTION -->
+            <section id="payments" class="section">
+                <h1>Payments <span style="font-size:12px; background:#313339; padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:4px;">Beta</span></h1>
+                <h2 style="font-size:18px; margin-top:24px; margin-bottom:16px;">Payment Methods</h2>
+                <div class="card" style="margin-bottom:24px;">
+                    <div style="display:flex; align-items:center; gap:16px;">
+                        <div style="width:48px; height:32px; background:#0B0D0F; border:1px solid #313339; border-radius:4px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:10px;">VISA</div>
+                        <div>
+                            <div style="font-size:14px; font-weight:600;">Visa ending in 4444</div>
+                            <div style="font-size:12px; color:#65666A;">Expires 12/2028</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Add Payment Method</button>
+            </section>
+
             <!-- ACCOUNT INFO SECTION -->
             <section id="account-info" class="section">
                 <h1>Account Information</h1>
-                <div style="border-bottom:1px solid #313339; display:flex; gap:32px; margin-bottom:32px;">
-                    <div style="padding:12px 0; border-bottom:2px solid white; font-weight:700; font-size:13px;">Core Account Info</div>
-                </div>
                 <div style="max-width:600px;">
                     <div style="margin-bottom:24px;">
                         <label style="font-size:11px; font-weight:800; color:#BDC3C7; text-transform:uppercase; display:block; margin-bottom:8px;">Entity Name *</label>
@@ -262,33 +279,36 @@
                         <div style="flex:1;">
                             <label style="font-size:11px; font-weight:800; color:#BDC3C7; text-transform:uppercase; display:block; margin-bottom:8px;">Tax ID Type (Optional)</label>
                             <div class="custom-select-wrap">
-                                <select>
-                                    <option>Select type</option>
-                                    <option>SSN</option>
-                                    <option>EIN</option>
-                                </select>
+                                <select><option>Select type</option></select>
                             </div>
-                        </div>
-                        <div style="flex:1;">
-                            <label style="font-size:11px; font-weight:800; color:#BDC3C7; text-transform:uppercase; display:block; margin-bottom:8px;">Tax ID (Optional)</label>
-                            <input type="text" placeholder="Enter Tax ID" style="width:100%; background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:12px; color:white;">
                         </div>
                     </div>
                 </div>
             </section>
 
         </main>
+    </div>
 
-        <footer>
-            <div class="footer-links">
-                <span>©2026 Roblox Corporation. All rights reserved.</span>
-                <a href="#" style="color:#65666A; text-decoration:none;">Terms</a>
-                <a href="#" style="color:#65666A; text-decoration:none;">Privacy</a>
+    <!-- Payout Modal -->
+    <div id="payout-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h2 class="modal-title">One-Time Payout</h2>
+            <div class="modal-field">
+                <label>Recipient Username</label>
+                <input type="text" id="payout-username" class="modal-input" placeholder="Enter username...">
             </div>
-            <div class="footer-right">
-                <div class="lang-sel">🌐 English</div>
+            <div class="modal-field">
+                <label>Amount (Robux)</label>
+                <input type="number" id="payout-amount" class="modal-input" placeholder="0">
             </div>
-        </footer>
+            <div style="display:flex; gap:12px; justify-content:flex-end; margin-top:32px;">
+                <button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button>
+                <button class="btn btn-primary" id="payout-confirm-btn">Payout</button>
+            </div>
+            <div id="payout-success" style="display:none; margin-top:20px; color:#22C55E; font-weight:700; text-align:center;">
+                ✅ Payout successfully sent!
+            </div>
+        </div>
     </div>
 
     <script>
@@ -296,18 +316,19 @@
             // Random Funds logic
             const minFunds = 30000000;
             const maxFunds = 70000000;
-            const randomFunds = Math.floor(Math.random() * (maxFunds - minFunds + 1)) + minFunds;
+            let currentFunds = Math.floor(Math.random() * (maxFunds - minFunds + 1)) + minFunds;
             
             const fundEl = document.getElementById('payout-fund-val');
             const devexEl = document.getElementById('devex-eligible-val');
             
-            if (fundEl) fundEl.textContent = randomFunds.toLocaleString();
-            
-            // DevEx Eligible (approx 15% of funds)
-            if (devexEl) {
-                const eligible = Math.floor(randomFunds * 0.15);
-                devexEl.textContent = eligible.toLocaleString() + " eligible *";
+            function updateDisplays() {
+                if (fundEl) fundEl.textContent = currentFunds.toLocaleString();
+                if (devexEl) {
+                    const eligible = Math.floor(currentFunds * 0.15);
+                    devexEl.textContent = eligible.toLocaleString() + " eligible *";
+                }
             }
+            updateDisplays();
 
             const navItems = document.querySelectorAll('.nav-item');
             const sections = document.querySelectorAll('.section');
@@ -339,6 +360,30 @@
                 document.getElementById('payout-group').style.display = tabId === 'group' ? 'block' : 'none';
                 document.getElementById('payout-exp').style.display = tabId === 'exp' ? 'block' : 'none';
             };
+
+            // Modal Logic
+            window.openPayoutModal = () => {
+                document.getElementById('payout-modal').style.display = 'flex';
+                document.getElementById('payout-success').style.display = 'none';
+            };
+            window.closePayoutModal = () => {
+                document.getElementById('payout-modal').style.display = 'none';
+            };
+
+            document.getElementById('payout-confirm-btn').addEventListener('click', () => {
+                const amount = parseInt(document.getElementById('payout-amount').value);
+                const username = document.getElementById('payout-username').value;
+                if (username && amount > 0 && amount <= currentFunds) {
+                    currentFunds -= amount;
+                    updateDisplays();
+                    document.getElementById('payout-success').style.display = 'block';
+                    setTimeout(() => closePayoutModal(), 2000);
+                } else if (amount > currentFunds) {
+                    alert("Insufficient Group Funds!");
+                } else {
+                    alert("Please enter a valid username and amount.");
+                }
+            });
         });
     </script>
 </body>

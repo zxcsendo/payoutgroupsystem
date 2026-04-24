@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Dashboard - Roblox</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.roblox.com/favicon.ico">
+</head>
+<body>
+    <!-- Global Sidebar (Far Left) -->
+    <aside class="global-sidebar">
+        <div class="logo-container">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="60" height="60" fill="white" transform="rotate(15 50 50)" />
+            </svg>
+        </div>
+        <nav>
+            <div class="global-nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <span>Home</span>
+            </div>
+            <div class="global-nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                <span>Creations</span>
+            </div>
+            <div class="global-nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <span>Learn</span>
+            </div>
+            <div class="global-nav-item active">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Finances</span>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Context Sidebar (Finances) -->
+    <aside class="context-sidebar">
+        <div class="sidebar-title">Finances</div>
+        <div class="nav-group">
+            <a href="#" class="nav-item" data-section="devex">DevEx</a>
+            <a href="#" class="nav-item active" data-section="payouts">Payouts</a>
+            <a href="#" class="nav-item" data-section="transactions">Transactions</a>
+        </div>
+        <div class="divider"></div>
+        <div class="nav-group">
+            <a href="#" class="nav-item" data-section="billing">Billing <span style="font-size: 10px; background: #313339; padding: 2px 6px; border-radius: 4px; margin-left: auto;">Beta</span></a>
+            <a href="#" class="nav-item" data-section="payments">Payments <span style="font-size: 10px; background: #313339; padding: 2px 6px; border-radius: 4px; margin-left: auto;">Beta</span></a>
+            <a href="#" class="nav-item" data-section="account-info">Account Information</a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+        <header>
+            <div class="header-left">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <div class="breadcrumb" id="breadcrumb">Payouts</div>
+            </div>
+            <div class="header-right">
+                <div class="icon-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <div class="icon-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                </div>
+                <div class="profile-circle">
+                    <img src="https://tr.rbxcdn.com/30day/avatar-headshot/150x150/png" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            
+            <!-- PAYOUTS SECTION -->
+            <section id="payouts" class="section active">
+                <h1>Payouts</h1>
+                <p class="description">Group payouts enables you to distribute Earned Robux with collaborators who helped you develop content on Roblox. Only Group members that have participated in collaborating on this content are eligible for payouts.</p>
+                
+                <div class="card-row">
+                    <div class="card">
+                        <div class="card-label">Group Funds</div>
+                        <div class="card-subtext">Robux in your group's account</div>
+                        <div class="robux-display">
+                            <img src="https://static.wikia.nocookie.net/roblox/images/6/60/Robux_2019.svg" class="robux-icon" alt="Robux">
+                            <span>12,450,230</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-label">Send a One-Time Payout</div>
+                        <div class="card-subtext">Give Robux to your collaborators</div>
+                        <button class="btn btn-secondary">Send Robux</button>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab">Group</button>
+                    <button class="tab active">Experiences</button>
+                </div>
+
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="exp-info">
+                            <img src="experience_thumb.png" class="exp-thumb" alt="Paradise Hangout">
+                            <div class="exp-details">
+                                <h3>Paradise Hangout</h3>
+                                <p>107637013991129</p>
+                            </div>
+                        </div>
+                        <div class="exp-stats">
+                            <div class="stat-group">
+                                <span class="stat-label">Group Earnings</span>
+                                <span class="stat-value">100%</span>
+                            </div>
+                            <div class="stat-group">
+                                <span class="stat-label">Splits</span>
+                                <span class="stat-value">1</span>
+                            </div>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEVEX SECTION -->
+            <section id="devex" class="section">
+                <h1>DevEx</h1>
+                <div class="devex-progress">
+                    <div class="circular-progress">
+                        0%
+                    </div>
+                    <div class="eligible-info">
+                        <p>Keep it up, earn more to cash out!</p>
+                        <div class="robux-display">
+                            <img src="https://static.wikia.nocookie.net/roblox/images/6/60/Robux_2019.svg" class="robux-icon" alt="Robux">
+                            <span>350 Eligible *</span>
+                        </div>
+                        <p>Current rate: 10,000 converts to $35.00 USD</p>
+                    </div>
+                    <button class="btn btn-secondary" style="margin-left: auto;" disabled>Cash Out</button>
+                </div>
+                <p class="description">The Developer Exchange Program (also known as DevEx) allows you to earn money by creating awesome experiences on Roblox. Once you earn 30,000 Robux or more, you are eligible to convert your virtual earnings to real-world cash.</p>
+                
+                <div class="requirement-list">
+                    <div class="requirement-item">
+                        <span class="check-icon">✓</span> Minimum of 30,000 earned Robux in your account
+                    </div>
+                    <div class="requirement-item">
+                        <span class="check-icon">✓</span> Have a verified email address
+                    </div>
+                    <div class="requirement-item">
+                        <span class="check-icon">✓</span> Valid DevEx portal account
+                    </div>
+                    <div class="requirement-item">
+                        <span class="check-icon">✓</span> 13 years of age or older
+                    </div>
+                    <div class="requirement-item">
+                        <span class="check-icon">✓</span> Community member in good standing
+                    </div>
+                </div>
+            </section>
+
+            <!-- BILLING SECTION -->
+            <section id="billing" class="section">
+                <h1>Billing <span style="font-size: 14px; background: #313339; padding: 4px 8px; border-radius: 4px; vertical-align: middle; margin-left: 8px;">Beta</span></h1>
+                <div class="tabs">
+                    <button class="tab active">Extended Services</button>
+                </div>
+                
+                <div class="card-row">
+                    <div class="card">
+                        <div class="card-label">Cost Summary</div>
+                        <div style="display: flex; gap: 48px; margin-top: 16px;">
+                            <div>
+                                <div class="card-subtext">Pending balance</div>
+                                <div style="font-size: 20px; font-weight: 700;">$0.00</div>
+                            </div>
+                            <div>
+                                <div class="card-subtext">Month to Date cost</div>
+                                <div style="font-size: 20px; font-weight: 700;">$0.00</div>
+                            </div>
+                        </div>
+                        <p class="card-subtext" style="margin-top: 16px;">A bill will be generated on your billing date each month, or when your outstanding balance reaches $10.00. <a href="#" style="color: var(--accent-blue);">Learn more.</a></p>
+                    </div>
+                    <div class="card">
+                        <div class="card-label">Payment Method</div>
+                        <div style="margin-top: 16px; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                            <span>No payment options available</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <p class="card-subtext" style="margin-top: 16px;">This payment method applies to all experiences on this account. A $1.00 USD temporary authorization hold may be placed on your card.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 48px;">
+                    <h2 style="font-size: 18px; margin-bottom: 16px;">Billing history</h2>
+                    <p class="description">Your billing activity for Extended Services usage across experiences.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2" style="text-align: center; padding: 48px;">No Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- PAYMENTS SECTION -->
+            <section id="payments" class="section">
+                <h1>Payments <span style="font-size: 14px; background: #313339; padding: 4px 8px; border-radius: 4px; vertical-align: middle; margin-left: 8px;">Beta</span></h1>
+                <h2 style="font-size: 20px; margin-bottom: 16px; margin-top: 32px;">Payment Methods</h2>
+                
+                <div class="card" style="margin-top: 24px;">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div style="width: 48px; height: 32px; background: #2C2E33; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">VISA</div>
+                        <div>
+                            <div style="font-size: 14px; font-weight: 600;">Visa ending in 4444</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">Expires 12/2028</div>
+                        </div>
+                        <div style="margin-left: auto; color: var(--text-secondary); cursor: pointer;">Edit</div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" style="margin-top: 24px;">Add Payment Method</button>
+            </section>
+
+            <!-- ACCOUNT INFO SECTION -->
+            <section id="account-info" class="section">
+                <h1>Account Information</h1>
+                <div class="tabs">
+                    <button class="tab active">Core Account Info</button>
+                    <button class="tab">Legal Address</button>
+                    <button class="tab">Invoicing</button>
+                </div>
+
+                <div style="max-width: 600px; margin-top: 32px;">
+                    <div style="margin-bottom: 24px;">
+                        <label class="stat-label">Entity Name *</label>
+                        <input type="text" value="Zxcsendo Studios" style="width: 100%; background: #1B1D21; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; color: white; margin-top: 8px;">
+                        <p class="card-subtext" style="margin-top: 8px;">This is how your name or business will appear on the invoice.</p>
+                    </div>
+
+                    <div style="display: flex; gap: 16px; margin-bottom: 32px;">
+                        <div style="flex: 1;">
+                            <label class="stat-label">Tax ID Type (Optional)</label>
+                            <div style="width: 100%; background: #1B1D21; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; color: white; margin-top: 8px; display: flex; justify-content: space-between;">
+                                <span>Select type</span>
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <label class="stat-label">Tax ID (Optional)</label>
+                            <input type="text" placeholder="Enter Tax ID" style="width: 100%; background: #1B1D21; border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; color: white; margin-top: 8px;">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 12px;">
+                        <button class="btn btn-secondary">Cancel</button>
+                        <button class="btn btn-secondary" disabled>Update</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <span>©2026 Roblox Corporation. All rights reserved.</span>
+                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Terms</a>
+                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Privacy</a>
+                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Accessibility</a>
+                <a href="#" style="color: var(--text-secondary); text-decoration: none;">Support</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <div class="social-icons">
+                    <!-- Placeholder social icons -->
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </div>
+                <div class="language-selector">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>English</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

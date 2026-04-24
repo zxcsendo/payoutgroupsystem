@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Global Sidebar (13 items) -->
+    <!-- Global Sidebar -->
     <aside class="global-sidebar">
-        <div class="logo-container">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V20H4V4ZM9 9H15V15H9V9Z" fill="black"/></svg>
-        </div>
+        <div class="logo-container"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4H20V20H4V4ZM9 9H15V15H9V9Z" fill="black"/></svg></div>
         <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></div>
         <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span>Creations</span></div>
         <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>Learn</span></div>
@@ -27,7 +25,6 @@
         <div class="global-nav-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>Studio</span></div>
     </aside>
 
-    <!-- Context Sidebar -->
     <aside class="context-sidebar">
         <div class="sidebar-title">Finances</div>
         <div class="nav-group">
@@ -45,125 +42,174 @@
 
     <div class="main-wrapper">
         <header>
-            <div class="header-left">
-                <div class="breadcrumb" id="breadcrumb"><svg width="14" height="14" fill="#BDC3C7" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg> Payouts</div>
-            </div>
+            <div class="breadcrumb" id="breadcrumb">Payouts</div>
             <div class="header-right">
                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
                 <div class="profile-img"></div>
             </div>
         </header>
 
         <main class="content-area">
-            
-            <!-- PAYOUTS SECTION -->
+            <!-- PAYOUTS -->
             <section id="payouts" class="section active">
-                <h1 style="font-size:22px; margin-bottom:4px;">Payouts</h1>
+                <h1>Payouts</h1>
                 <p class="description">Group payouts enables you to distribute Earned Robux with collaborators who helped you develop content on Roblox.</p>
-                
                 <div class="card-row">
                     <div class="card card-payout">
-                        <div class="card-label" style="font-size:15px;">Group Funds</div>
-                        <div class="card-subtext">Robux in your group's account</div>
+                        <div class="filter-label">Group Funds</div>
                         <div class="robux-display">
-                            <svg class="robux-icon-main" viewBox="0 0 16 16"><path class="robux-svg" d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg>
                             <span id="payout-fund-val">...</span>
                         </div>
                     </div>
-                    <div class="card card-payout" style="display:flex; flex-direction:column; justify-content:center; align-items:flex-start;">
-                        <div class="card-label">Send a One-Time Payout</div>
+                    <div class="card card-payout">
+                        <div class="filter-label">One-Time Payout</div>
                         <button class="btn btn-secondary" onclick="openPayoutModal()" style="margin-top:8px;">Send Robux</button>
                     </div>
                 </div>
-
-                <div class="pill-tabs">
-                    <button class="pill-tab active" onclick="setPayoutTab(this, 'group')">Group</button>
-                    <button class="pill-tab" onclick="setPayoutTab(this, 'exp')">Experiences</button>
-                </div>
-
+                <div class="pill-tabs"><button class="pill-tab active" onclick="setPayoutTab(this, 'group')">Group</button><button class="pill-tab" onclick="setPayoutTab(this, 'exp')">Experiences</button></div>
                 <div id="payout-group">
-                    <div class="splits-header">Splits <svg width="16" height="16" fill="#65666A" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg></div>
-                    <div class="split-item">
-                        <div class="split-thumb" style="background:#FFE69A; display:flex; align-items:center; justify-content:center;"><img src="experience_thumb.png" style="width:24px; height:24px;"></div>
-                        <div style="flex:1;">
-                            <div style="font-weight:700;">Hiraya Community</div>
-                            <div style="font-size:10px; color:#65666A;">896321250</div>
-                        </div>
+                    <div style="font-weight:800; margin-bottom:8px;">Splits</div>
+                    <div style="background:#191B1F; border-radius:8px; padding:12px; display:flex; align-items:center; gap:12px; border-left:4px solid #0084FF;">
+                        <img src="experience_thumb.png" style="width:32px; height:32px; border-radius:4px;">
+                        <div style="flex:1;"><div style="font-weight:700;">Hiraya Community</div><div style="font-size:10px; color:#65666A;">896321250</div></div>
                         <div style="font-weight:800;">100 %</div>
                     </div>
                 </div>
-
                 <div id="payout-exp" style="display:none;">
-                    <div class="exp-card-row">
-                        <div style="display:flex; align-items:center; gap:12px;">
-                            <img src="experience_thumb.png" style="width:36px; height:36px; border-radius:4px;">
-                            <div><div style="font-weight:700;">[SOON] Hiraya Hangout 🌴</div><div style="font-size:10px; color:#65666A;">8480412603</div></div>
-                        </div>
-                        <div style="display:flex; gap:32px; font-weight:800;">
-                            <div style="text-align:left;"><div class="filter-label" style="font-size:9px;">Group Earnings</div><div>100%</div></div>
-                            <div style="text-align:left;"><div class="filter-label" style="font-size:9px;">Splits</div><div>1</div></div>
-                        </div>
+                    <div style="background:#191B1F; border-radius:8px; padding:12px; display:flex; align-items:center; justify-content:space-between;">
+                        <div style="display:flex; align-items:center; gap:12px;"><img src="experience_thumb.png" style="width:36px; height:36px; border-radius:4px;"><div><div style="font-weight:700;">[SOON] Hiraya Hangout 🌴</div><div style="font-size:10px; color:#65666A;">8480412603</div></div></div>
+                        <div style="display:flex; gap:32px; font-weight:800;"><div style="text-align:left;"><div class="filter-label">Group Earnings</div><div>100%</div></div><div style="text-align:left;"><div class="filter-label">Splits</div><div>1</div></div></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Other sections maintained... -->
-            <section id="devex" class="section"><h1>DevEx</h1></section>
-            <section id="transactions" class="section"><h1>Transactions</h1></section>
-            <section id="billing" class="section"><h1>Billing</h1></section>
-            <section id="payments" class="section"><h1>Payments</h1></section>
-            <section id="account-info" class="section"><h1>Account Information</h1></section>
+            <!-- DEVEX -->
+            <section id="devex" class="section">
+                <h1>DevEx</h1>
+                <div style="background:#191B1F; padding:20px; border-radius:8px; display:flex; align-items:center; gap:20px;">
+                    <div style="width:50px; height:50px; border-radius:50%; border:4px solid #2C2E33; display:flex; align-items:center; justify-content:center; font-weight:800;">0%</div>
+                    <div style="flex:1;">
+                        <div style="font-weight:700;">Keep it up, earn more to cash out!</div>
+                        <div id="devex-eligible-val" style="font-size:16px; font-weight:800; margin:4px 0;">...</div>
+                        <div style="font-size:10px; color:#65666A;">Current rate: 10,000 converts to $38.00 USD</div>
+                    </div>
+                    <button class="btn btn-secondary" disabled>Cash Out</button>
+                </div>
+                <div style="margin-top:20px;">
+                    <div style="margin-bottom:8px;">✓ Minimum of 30,000 earned Robux</div>
+                    <div style="margin-bottom:8px;">✓ Verified email address</div>
+                </div>
+            </section>
 
+            <!-- TRANSACTIONS -->
+            <section id="transactions" class="section">
+                <h1>Transactions</h1>
+                <div class="info-box-green">
+                    <div style="display:flex; align-items:center; gap:12px;">👑 <div><div style="font-weight:700; color:white;">Get approval to distribute priced assets</div><div style="font-size:11px;">Set prices for your Store assets</div></div></div>
+                    <button class="btn btn-secondary">Submit for Review</button>
+                </div>
+                <div class="filters-row">
+                    <div class="filter-group"><label class="filter-label">Payment Type</label><div class="select-wrapper" style="width:180px;"><select><option>Outgoing Payments</option></select></div></div>
+                    <div class="filter-group"><label class="filter-label">Start Date</label><input type="text" class="filter-input" placeholder="Start Date"></div>
+                    <div class="filter-group"><label class="filter-label">End Date</label><input type="text" class="filter-input" placeholder="End Date"></div>
+                </div>
+                <table class="data-table">
+                    <thead><tr><th>Date</th><th>Source</th><th>Description</th><th>Type</th><th>Amount</th></tr></thead>
+                    <tbody><tr><td>Sep 20, 2025</td><td>Kohl</td><td>Kohl's Admin ID: 172732271</td><td>Model</td><td>Paid Free</td></tr></tbody>
+                </table>
+            </section>
+
+            <!-- BILLING -->
+            <section id="billing" class="section">
+                <h1>Billing <span style="font-size:10px; background:#313339; padding:2px 6px; border-radius:4px;">Beta</span></h1>
+                <div class="card-row">
+                    <div class="card" style="flex:1;"><div class="filter-label">Cost Summary</div><div style="font-size:20px; font-weight:800; margin:10px 0;">$0.00</div><div style="font-size:11px; color:#65666A;">Month to Date cost</div></div>
+                    <div class="card" style="flex:1;"><div class="filter-label">Payment Method</div><div class="select-wrapper" style="margin-top:8px;"><select><option>No options available</option></select></div></div>
+                </div>
+                <h2 style="font-size:18px; margin-top:30px;">Billing history</h2>
+                <table class="data-table"><thead><tr><th>Date</th><th>Amount</th></tr></thead><tbody><tr><td colspan="2" style="text-align:center; padding:30px; color:#65666A;">No Data</td></tr></tbody></table>
+            </section>
+
+            <!-- PAYMENTS -->
+            <section id="payments" class="section">
+                <h1>Payments</h1>
+                <div class="card" style="display:flex; align-items:center; gap:16px;">
+                    <div style="background:#0B0D0F; padding:4px 10px; border-radius:4px; font-weight:800;">VISA</div>
+                    <div><div style="font-weight:700;">Visa ending in 4444</div><div style="font-size:11px; color:#65666A;">Expires 12/2028</div></div>
+                </div>
+            </section>
+
+            <!-- ACCOUNT INFO -->
+            <section id="account-info" class="section">
+                <h1>Account Information</h1>
+                <div style="margin-top:20px;">
+                    <label class="filter-label">Entity Name *</label>
+                    <input type="text" value="Zxcsendo Studios" style="width:100%; background:#0B0D0F; border:1px solid #313339; border-radius:6px; padding:12px; color:white; margin-bottom:20px;">
+                    <label class="filter-label">Tax ID Type</label>
+                    <div class="select-wrapper"><select><option>Select type</option></select></div>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <div class="footer-links">
-                <span>©2026 Roblox Corporation. All rights reserved.</span>
-                <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Support</a>
-            </div>
-            <div class="footer-right">
-                <div class="social-icons-row">𝕏 f in 📸 📺</div>
-                <div class="lang-box">🌐 English</div>
-            </div>
+            <div class="footer-links-row"><span>©2026 Roblox Corporation.</span><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Support</a></div>
+            <div class="social-icons-row">𝕏 f in Instagram YouTube</div>
         </footer>
     </div>
 
-    <!-- Multi-Step Payout Modal -->
+    <!-- Multi-Step Modal (Exact workflow) -->
     <div id="payout-modal" class="modal-overlay">
         <div class="modal-box">
-            <div id="modal-step-search" class="modal-step active">
+            <!-- Step 1 & 2 -->
+            <div id="step-1" class="modal-step active">
                 <h2 class="modal-title">Send a One-Time Payout</h2>
-                <div style="position:relative; margin-bottom:16px;">
-                    <svg style="position:absolute; left:10px; top:50%; transform:translateY(-50%); color:#65666A;" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                    <input type="text" id="user-search-input" class="search-input" placeholder="Search username...">
+                <div class="search-field-wrap">
+                    <svg class="search-icon-in" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input type="text" id="modal-search" class="modal-search-input" placeholder="Search username...">
                 </div>
-                <div id="search-results-area"></div>
-                <div style="display:flex; justify-content:space-between; margin-top:24px;">
+                <div id="modal-search-result-area"></div>
+                <div style="display:flex; justify-content:space-between; margin-top:30px;">
                     <button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button>
-                    <button class="btn btn-primary" id="search-next-btn" disabled onclick="toAmountStep()">Next</button>
+                    <button class="btn btn-primary" id="btn-next-1" disabled onclick="toStep(3)">Next</button>
                 </div>
             </div>
 
-            <!-- Steps 3-5 structure maintained but with refined spacing -->
-            <div id="modal-step-amount" class="modal-step">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <!-- Step 3 -->
+            <div id="step-3" class="modal-step">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
                     <h2 class="modal-title" style="margin:0;">Send to Creators</h2>
-                    <div style="display:flex; align-items:center; gap:6px;"><span style="font-weight:800;">Total</span><div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#BDC3C7"/></svg><span id="amount-total-display">0</span></div></div>
+                    <div style="display:flex; align-items:center; gap:6px;"><span style="font-weight:800;">Total</span><div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#BDC3C7"/></svg><span id="modal-total-display">0</span></div></div>
                 </div>
-                <div style="display:flex; justify-content:space-between; align-items:center;"><div id="selected-user-card-amount"></div><div class="amount-input-box" style="width:140px;"><span class="amount-label-float">Amount</span><div class="amount-field-wrap"><svg width="12" height="12" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#BDC3C7"/></svg><input type="number" id="payout-amount-input" class="amount-input-field" value="10000" oninput="updateModalTotal()"></div></div></div>
-                <div style="display:flex; gap:10px; margin-top:24px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" onclick="toSearchStep()">Back</button><button class="btn btn-primary" style="margin-left:auto;" onclick="toConfirmStep()">Next</button></div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div id="step-3-user-card"></div>
+                    <div class="amount-input-group">
+                        <span class="amount-float-label">Amount</span>
+                        <div class="amount-input-wrap">
+                            <svg width="14" height="14" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="#BDC3C7"/></svg>
+                            <input type="number" id="modal-amount-input" class="amount-input-box-in" value="10000" oninput="updateModalTotal()">
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:10px; margin-top:30px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" onclick="toStep(1)">Back</button><button class="btn btn-primary" style="margin-left:auto;" onclick="toStep(4)">Next</button></div>
             </div>
 
-            <div id="modal-step-confirm" class="modal-step">
+            <!-- Step 4 -->
+            <div id="step-4" class="modal-step">
                 <h2 class="modal-title">Confirm Payout</h2>
-                <div style="margin-bottom:16px;"><div style="font-size:11px; color:#65666A; margin-bottom:4px;">From</div><div style="display:flex; align-items:center; gap:10px;"><div style="width:36px; height:36px; background:white; border-radius:6px; display:flex; align-items:center; justify-content:center; color:orange; font-size:20px;">★</div><div><div style="font-weight:800;">StarCode Studio</div><div style="font-size:10px; color:#65666A;">896321250</div></div></div></div>
-                <div style="margin-bottom:16px;"><div style="font-size:11px; color:#65666A; margin-bottom:4px;">To</div><div style="display:flex; justify-content:space-between; align-items:center;"><div id="selected-user-card-confirm"></div><div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg><span class="final-amount-text">10,000</span></div></div></div>
-                <div style="border-top:1px solid #313339; padding-top:12px; display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;"><span style="font-size:16px; font-weight:800;">Total</span><div style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:800;"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg><span class="final-amount-text">10,000</span></div></div>
-                <div style="display:flex; gap:10px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" onclick="toAmountStep()">Back</button><button class="btn btn-primary" style="margin-left:auto; padding:8px 24px;" onclick="executePayout()">Confirm</button></div>
+                <div style="margin-bottom:16px;"><div class="filter-label">From</div><div style="display:flex; align-items:center; gap:10px; background:#191B1F; padding:10px; border-radius:8px;"><div style="width:36px; height:36px; background:white; border-radius:6px; display:flex; align-items:center; justify-content:center; color:orange;">★</div><div><div style="font-weight:800;">StarCode Studio</div><div style="font-size:10px; color:#65666A;">896321250</div></div></div></div>
+                <div style="margin-bottom:16px;"><div class="filter-label">To</div><div style="display:flex; justify-content:space-between; align-items:center;"><div id="step-4-user-card"></div><div style="display:flex; align-items:center; gap:4px; font-weight:800;"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg><span class="final-amt">10,000</span></div></div></div>
+                <div style="border-top:1px solid #313339; padding-top:12px; display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;"><span style="font-size:16px; font-weight:800;">Total</span><div style="display:flex; align-items:center; gap:6px; font-size:16px; font-weight:800;"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M1.38576 4.38576L8 0.565809L14.6142 4.38576V11.6142L8 15.4342L1.38576 11.6142V4.38576ZM8 2.76632L3.38576 5.42993V10.5701L8 13.2337L12.6142 10.5701V5.42993L8 2.76632ZM8 5.42993L10.6142 6.93922V9.06078L8 10.5701L5.38576 9.06078V6.93922L8 5.42993Z" fill="white"/></svg><span class="final-amt">10,000</span></div></div>
+                <div style="display:flex; gap:10px;"><button class="btn btn-secondary" onclick="closePayoutModal()">Cancel</button><button class="btn btn-secondary" onclick="toStep(3)">Back</button><button class="btn btn-white" style="margin-left:auto; padding:10px 30px;" onclick="executePayout()">Confirm</button></div>
             </div>
 
-            <div id="modal-step-success" class="modal-step" style="text-align:center;"><div class="success-check-circle">✓</div><h2 style="font-weight:800; margin-bottom:4px;">Payout Sent!</h2><p style="font-size:12px; color:#BDC3C7; margin-bottom:24px;"><span class="final-amount-text">10,000</span> Robux sent to <span id="success-username">rzsenhsha</span>.</p><button class="btn btn-secondary" style="background:#BDC3C7; color:black; padding:8px 32px;" onclick="closePayoutModal()">Done</button></div>
+            <!-- Step 5 -->
+            <div id="step-5" class="modal-step" style="text-align:center;">
+                <div class="success-check-icon">✓</div>
+                <h2 style="font-weight:800; margin-bottom:8px;">Payout Sent!</h2>
+                <p style="font-size:13px; color:#BDC3C7; margin-bottom:30px;"><span class="final-amt">10,000</span> Robux sent to <span id="success-user">rzsenhsha</span>.</p>
+                <button class="btn btn-white" style="padding:10px 60px;" onclick="closePayoutModal()">Done</button>
+            </div>
         </div>
     </div>
 
@@ -178,67 +224,64 @@
             }
             updateDisplays();
 
-            // Real Avatar Logic using Roblox API
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                    document.getElementById(item.getAttribute('data-section')).classList.add('active');
+                    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                    item.classList.add('active');
+                    document.getElementById('breadcrumb').textContent = item.textContent;
+                });
+            });
+
             let selectedUser = null;
-            document.getElementById('user-search-input').addEventListener('input', async (e) => {
+            document.getElementById('modal-search').addEventListener('input', async (e) => {
                 const query = e.target.value.trim();
                 if (query.length > 2) {
                     try {
-                        // Use a proxy to avoid CORS
                         const proxy = "https://corsproxy.io/?";
                         const userRes = await fetch(`${proxy}https://users.roblox.com/v1/usernames/users`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
+                            method: 'POST', headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ usernames: [query], excludeBannedUsers: true })
                         });
                         const userData = await userRes.json();
-                        
                         if (userData.data && userData.data.length > 0) {
                             const user = userData.data[0];
                             const thumbRes = await fetch(`${proxy}https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${user.id}&size=48x48&format=Png&isCircular=false`);
                             const thumbData = await thumbRes.json();
-                            const avatarUrl = thumbData.data[0].imageUrl;
-
-                            selectedUser = { id: user.id, name: user.displayName, username: user.name, avatar: avatarUrl };
-                            displayUser(selectedUser);
-                        } else {
-                            // Fallback for demo if API fails or user not found
-                            if (query.toLowerCase() === "rzsenhsha") {
-                                selectedUser = { id: 123456, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
-                                displayUser(selectedUser);
-                            }
+                            selectedUser = { id: user.id, name: user.displayName, username: user.name, avatar: thumbData.data[0].imageUrl };
+                            displaySearch(selectedUser);
+                        } else if (query.toLowerCase() === "rzsenhsha") {
+                            selectedUser = { id: 123, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
+                            displaySearch(selectedUser);
                         }
-                    } catch (err) {
-                        console.error("API Error, using mock", err);
+                    } catch {
                         if (query.toLowerCase() === "rzsenhsha") {
-                            selectedUser = { id: 123456, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
-                            displayUser(selectedUser);
+                            selectedUser = { id: 123, name: "2ViLe_Sendo", username: "rzsenhsha", avatar: "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-72C9C2E3C0F5B4B0-Png/48/48/AvatarHeadshot/Png" };
+                            displaySearch(selectedUser);
                         }
                     }
                 }
             });
 
-            function displayUser(u) {
-                document.getElementById('search-results-area').innerHTML = `
-                    <div class="user-result-card">
-                        <div class="user-avatar-modal"><img src="${u.avatar}" style="width:100%; height:100%; border-radius:4px;"></div>
-                        <div style="flex:1;"><div style="font-weight:800;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div>
-                        <div style="cursor:pointer; color:#65666A;" onclick="clearSearch()">✕</div>
-                    </div>
-                `;
-                document.getElementById('search-next-btn').disabled = false;
+            function displaySearch(u) {
+                document.getElementById('modal-search-result-area').innerHTML = `<div class="user-card-result"><div class="user-avatar-rect"><img src="${u.avatar}" style="width:100%; height:100%; border-radius:4px;"></div><div style="flex:1;"><div style="font-weight:800;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div><div style="cursor:pointer; color:#65666A;" onclick="clearSearch()">✕</div></div>`;
+                document.getElementById('btn-next-1').disabled = false;
             }
 
-            window.clearSearch = () => { document.getElementById('user-search-input').value = ''; document.getElementById('search-results-area').innerHTML = ''; document.getElementById('search-next-btn').disabled = true; };
-            window.openPayoutModal = () => { document.getElementById('payout-modal').style.display = 'flex'; };
+            window.clearSearch = () => { document.getElementById('modal-search').value = ''; document.getElementById('modal-search-result-area').innerHTML = ''; document.getElementById('btn-next-1').disabled = true; };
+            window.openPayoutModal = () => { document.getElementById('payout-modal').style.display = 'flex'; toStep(1); clearSearch(); };
             window.closePayoutModal = () => { document.getElementById('payout-modal').style.display = 'none'; };
-            window.toAmountStep = () => { document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active')); document.getElementById('modal-step-amount').classList.add('active'); document.getElementById('selected-user-card-amount').innerHTML = renderMini(selectedUser); updateModalTotal(); };
-            window.toSearchStep = () => { document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active')); document.getElementById('modal-step-search').classList.add('active'); };
-            window.toConfirmStep = () => { document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active')); document.getElementById('modal-step-confirm').classList.add('active'); document.getElementById('selected-user-card-confirm').innerHTML = renderMini(selectedUser); const amount = document.getElementById('payout-amount-input').value; document.querySelectorAll('.final-amount-text').forEach(t => t.textContent = parseInt(amount).toLocaleString()); };
-            window.executePayout = () => { currentFunds -= parseInt(document.getElementById('payout-amount-input').value); updateDisplays(); document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active')); document.getElementById('modal-step-success').classList.add('active'); document.getElementById('success-username').textContent = selectedUser.username; };
-            window.updateModalTotal = () => { document.getElementById('amount-total-display').textContent = parseInt(document.getElementById('payout-amount-input').value || 0).toLocaleString(); };
-            function renderMini(u) { return `<div style="display:flex; align-items:center; gap:10px;"><div class="user-avatar-modal" style="width:30px; height:30px;"><img src="${u.avatar}" style="width:100%; height:100%;"></div><div><div style="font-weight:800; font-size:12px;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div></div>`; }
-            window.setPayoutTab = (btn, tabId) => { document.querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); document.getElementById('payout-group').style.display = tabId === 'group' ? 'block' : 'none'; document.getElementById('payout-exp').style.display = tabId === 'exp' ? 'block' : 'none'; };
+            window.toStep = (n) => { 
+                document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
+                document.getElementById('step-' + n).classList.add('active');
+                if(n === 3) { document.getElementById('step-3-user-card').innerHTML = renderUser(selectedUser); updateModalTotal(); }
+                if(n === 4) { document.getElementById('step-4-user-card').innerHTML = renderUser(selectedUser); const amt = document.getElementById('modal-amount-input').value; document.querySelectorAll('.final-amt').forEach(a => a.textContent = parseInt(amt).toLocaleString()); }
+            };
+            window.executePayout = () => { currentFunds -= parseInt(document.getElementById('modal-amount-input').value); updateDisplays(); document.getElementById('success-user').textContent = selectedUser.username; toStep(5); };
+            window.updateModalTotal = () => { document.getElementById('modal-total-display').textContent = parseInt(document.getElementById('modal-amount-input').value || 0).toLocaleString(); };
+            window.setPayoutTab = (btn, id) => { document.querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); document.getElementById('payout-group').style.display = id === 'group' ? 'block' : 'none'; document.getElementById('payout-exp').style.display = id === 'exp' ? 'block' : 'none'; };
+            function renderUser(u) { return `<div style="display:flex; align-items:center; gap:10px;"><div class="user-avatar-rect" style="width:32px; height:32px;"><img src="${u.avatar}" style="width:100%; height:100%;"></div><div><div style="font-weight:800; font-size:12px;">${u.name}</div><div style="font-size:10px; color:#65666A;">@${u.username}</div></div></div>`; }
         });
     </script>
 </body>

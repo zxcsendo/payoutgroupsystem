@@ -153,7 +153,9 @@ h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
 
 /* Cards */
 .card-row { display: flex; gap: 16px; margin-bottom: 24px; }
-.card { background-color: #191B1F; border-radius: 8px; padding: 20px; flex: 1; }
+.card { background-color: #191B1F; border-radius: 8px; padding: 20px; }
+.card-payout { width: 320px; flex: none; } /* Compact payout cards */
+
 .card-label { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
 .card-subtext { font-size: 12px; color: #65666A; margin-bottom: 12px; }
 .robux-display { display: flex; align-items: center; gap: 6px; font-size: 20px; font-weight: 800; }
@@ -175,7 +177,13 @@ h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
 .splits-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .splits-box { background: #191B1F; border-radius: 8px; overflow: hidden; }
 .split-item { display: flex; align-items: center; padding: 12px 16px; border-left: 4px solid #0084FF; }
-.split-thumb { width: 32px; height: 32px; border-radius: 4px; background: #222; margin-right: 12px; display: flex; align-items: center; justify-content: center; }
+.split-thumb { 
+    width: 32px; height: 32px; border-radius: 4px; 
+    background: #2C2E33; margin-right: 12px; 
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+}
+.split-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .split-name { font-size: 13px; font-weight: 600; }
 .split-id { font-size: 11px; color: #65666A; }
 .split-val { margin-left: auto; font-size: 14px; font-weight: 700; }
@@ -208,9 +216,35 @@ footer { border-top: 1px solid var(--border-color); padding: 16px 32px; display:
 .social-icons { display: flex; gap: 16px; font-size: 16px; }
 .lang-sel { background: #191B1F; border: 1px solid #313339; border-radius: 20px; padding: 4px 12px; display: flex; align-items: center; gap: 8px; cursor: pointer; }
 
-/* Experience List specific */
-.exp-row-styled { background: #191B1F; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px; margin-bottom: 1px; }
+/* Experience List */
+.exp-row-plain { padding: 12px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #313339; }
 .exp-stats-inline { display: flex; gap: 40px; align-items: center; }
 .exp-stat-col { display: flex; flex-direction: column; align-items: flex-start; }
 .exp-stat-label { font-size: 10px; color: #65666A; font-weight: 800; text-transform: uppercase; }
 .exp-stat-val { font-size: 12px; font-weight: 700; color: white; }
+
+/* Custom Select Styling */
+.custom-select-wrap {
+    position: relative;
+    width: 100%;
+}
+.custom-select-wrap select {
+    width: 100%;
+    background: #0B0D0F;
+    border: 1px solid #313339;
+    border-radius: 6px;
+    padding: 12px;
+    color: white;
+    appearance: none;
+    outline: none;
+}
+.custom-select-wrap::after {
+    content: "⌵";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #65666A;
+    pointer-events: none;
+    font-size: 18px;
+}
